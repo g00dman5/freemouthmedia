@@ -25,14 +25,36 @@ export default function createRoutes() {
     },
 
     {
-    path: '/about',
-    name: 'About',
+    path: '/shop',
+    name: 'Shop',
     getComponent(nextState, cb) {
-     import('containers/About')
+     import('containers/Home')
        .then(loadModule(cb))
        .catch(errorLoading);
       },
     },
+
+    {
+    path: '/thought',
+    name: 'Thought',
+    getComponent(nextState, cb) {
+     import('containers/Home')
+       .then(loadModule(cb))
+       .catch(errorLoading);
+      },
+    },
+
+
+    {
+    path: '/culture',
+    name: 'Culture',
+    getComponent(nextState, cb) {
+     import('containers/Home')
+       .then(loadModule(cb))
+       .catch(errorLoading);
+      },
+    },
+
 
      {
       path: '*',
