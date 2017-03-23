@@ -7,6 +7,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
+import Responsive from 'react-responsive';
 export default class Home extends React.PureComponent
 
 {
@@ -14,12 +15,15 @@ export default class Home extends React.PureComponent
     const bannerStyle={
       width:"100%",
       height:"auto",
+      border:"1px solid #f2f2f2",
+      borderRadius:"20px",
+
 
     }
 
     const navStyle={
       border: "6px solid #bbbbbb",
-      borderRadius:"5px",
+      borderRadius:"25px",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -69,16 +73,46 @@ export default class Home extends React.PureComponent
     const galleryStyle={
       display:"flex",
       flexDirection:"row",
-      flexWrap:"wrap"
-
+      flexWrap:"wrap",
 
 
     }
     const imgStyle= {
-      border: "1px solid #CD5C5C",
+      border: "2px solid #ffffff",
+      borderRadius:"25px",
       width: "33%",
-      height:"auto",
-      padding:"2px"
+      padding:"3px",
+      boxShadow:"0px 0px 50px 10px rgba(0,0,0,0.1)",
+      position:"relative",
+      overflow:"hidden",
+
+
+    }
+
+    const tint1={
+      background: "rgba(215, 44, 44, 0.7)",
+      width:"100%",
+      height:"100%",
+      position:"absolute",
+      top:"0",
+      borderRadius:"25px",
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      color:"#ffffff",
+      fontSize: "40px",
+      textAlign:"center",
+      fontFamily:"'Squada One', cursive",
+
+
+    }
+
+    const img={
+      width:"100%",
+      height:"100%",
+      borderRadius:"25px",
+      overflow:"hidden",
+
 
     }
 
@@ -102,16 +136,23 @@ export default class Home extends React.PureComponent
         </header>
 
         <main>
-
           <div style={galleryStyle}>
-              <img style={imgStyle} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"/>
-              <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"/>
-              <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"/>
-              <img style={imgStyle} src="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"/>
-              <img style={imgStyle} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"/>
-              <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"/>
-           </div>
+              <div style={imgStyle}>
+                <img style={img} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"/>
+                <div style={tint1}>The Road to Nowhere leads directly to itself </div>
+              </div>
 
+                <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"/>
+
+                <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"/>
+
+                <img style={imgStyle} src="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"/>
+
+                <img style={imgStyle} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"/>
+
+                <img style={imgStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"/>
+
+          </div>
         </main>
 
         <footer>
