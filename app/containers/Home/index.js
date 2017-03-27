@@ -30,6 +30,7 @@ export default class Home extends React.PureComponent
       position:"fixed",
       width:"100%",
       background:"#ffffff",
+      zIndex:"99999",
 
     }
 
@@ -54,7 +55,7 @@ export default class Home extends React.PureComponent
 
     const headStyle={
       color:"#f90606",
-      fontSize: "100px",
+      fontSize: "96px",
       display:"block",
       textAlign:"center",
       paddingTop:"3px",
@@ -65,7 +66,7 @@ export default class Home extends React.PureComponent
 
     const bodyStyle={
       color: "#000000",
-      fontSize:"36px",
+      fontSize:"2em",
       textAlign:"center",
       fontFamily:"'Squada One', cursive",
       textShadow:"2px 2px 5px #000000",
@@ -89,6 +90,7 @@ export default class Home extends React.PureComponent
       boxShadow:"0px 0px 50px 10px rgba(0,0,0,0.1)",
       position:"relative",
       overflow:"hidden",
+
     }
 
 
@@ -215,6 +217,8 @@ export default class Home extends React.PureComponent
     }
 
 
+
+
     return (
       <div>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -229,6 +233,7 @@ export default class Home extends React.PureComponent
 
         <header>
           <img style={bannerStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10653515_4741856600188_3443636912086499995_n.jpg?oh=16a984235c16e49ff497da53dc70797c&oe=595EE6DE"/>
+
           <p style={headStyle}>Thought/Culture</p>
           <p style={bodyStyle}>An experiment in critical thinking and creative expression!</p>
         </header>
@@ -263,19 +268,14 @@ export default class Home extends React.PureComponent
 
               <div style={imgStyle}>
                 <img style={img} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"/>
-                <div style={tint6}>The metamorphosis of a Goodman.</div>
+                <div style={tint6}>The metamorphosis of Goodman.</div>
               </div>
 
           </div>
         </main>
 
         <footer>
-            <div style={footStyle}>
-            <Link style={linkStyle} to= '/thought'>Thought </Link>
-            <Link style={linkStyle} to= '/'> Home </Link>
-            <Link style={linkStyle} to= '/culture'>Culture </Link>
-            <Link style={linkStyle} to= '/shop'>Shop </Link>
-            </div>
+
         </footer>
 
        </div>
