@@ -8,6 +8,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
+import ImgBlock from 'components/ImgBlock';
 export default class Home extends React.PureComponent
 
 {
@@ -34,19 +35,32 @@ export default class Home extends React.PureComponent
 
     }
 
-    const linkStyle={
-      textDecoration:"none",
-      color:"#0000ff",
-      fontSize:"45px",
-      fontFamily:"'Squada One', cursive",
-
-    }
-    const footStyle={
+    const mobileNav={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
+      position:"fixed",
+      width:"100%",
+      background:"#ffffff",
+      zIndex:"99999",
+
+    }
+
+
+    const linkStyleM={
+      textDecoration:"none",
+      color:"#0000ff",
+      fontSize:"1.6em",
+      fontFamily:"'Squada One', cursive",
+
+    }
+
+
+    const linkStyle={
+      textDecoration:"none",
+      color:"#0000ff",
       fontSize:"45px",
       fontFamily:"'Squada One', cursive",
 
@@ -73,6 +87,28 @@ export default class Home extends React.PureComponent
 
     }
 
+    const headStyleM={
+      color:"#f90606",
+      fontSize: "1.7em",
+      display:"block",
+      textAlign:"center",
+      paddingTop:"3px",
+      fontFamily:"'Bungee Shade', cursive",
+      textShadow:"2px 2px 5px #000000",
+
+    }
+
+    const bodyStyleM={
+      color: "#000000",
+      fontSize:"1em",
+      textAlign:"center",
+      fontFamily:"'Squada One', cursive",
+      textShadow:"2px 2px 5px #000000",
+
+    }
+
+
+
 
     const galleryStyle={
       display:"flex",
@@ -81,14 +117,33 @@ export default class Home extends React.PureComponent
 
     }
 
+    const galleryStyleM={
+      display: "flex",
+      flexDirection:"column",
 
-    const imgStyle= {
+    }
+
+    const imgStyle={
       border: "2px solid #ffffff",
       borderRadius:"25px",
       width: "33%",
       padding:"1px",
       boxShadow:"0px 0px 50px 10px rgba(0,0,0,0.1)",
       position:"relative",
+      height: "350px",
+      overflow:"hidden",
+
+
+    }
+
+    const imgStyleM={
+      border: "2px solid #ffffff",
+      borderRadius:"25px",
+      width: "100%",
+      padding:"1px",
+      boxShadow:"0px 0px 50px 10px rgba(0,0,0,0.1)",
+      position:"relative",
+      height: "350px",
       overflow:"hidden",
 
     }
@@ -217,61 +272,117 @@ export default class Home extends React.PureComponent
     }
 
 
-
-
     return (
       <div>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
-
+        <Responsive minDeviceWidth={1024}>
           <div style={navStyle}>
             <Link style={linkStyle} to= '/thought'>Thought </Link>
             <Link style={linkStyle} to= '/'> Home </Link>
             <Link style={linkStyle} to= '/culture'>Culture </Link>
             <Link style={linkStyle} to= '/shop'>Shop </Link>
           </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div style={mobileNav}>
+            <Link style={linkStyleM} to= '/thought'>Thought </Link>
+            <Link style={linkStyleM} to= '/'> Home </Link>
+            <Link style={linkStyleM} to= '/culture'>Culture </Link>
+            <Link style={linkStyleM} to= '/shop'>Shop </Link>
+          </div>
+
+        </Responsive>
 
         <header>
+
           <img style={bannerStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10653515_4741856600188_3443636912086499995_n.jpg?oh=16a984235c16e49ff497da53dc70797c&oe=595EE6DE"/>
 
-          <p style={headStyle}>Thought/Culture</p>
-          <p style={bodyStyle}>An experiment in critical thinking and creative expression!</p>
+          <Responsive minDeviceWidth={1024}>
+           <p style={headStyle}>Thought/Culture</p>
+           <p style={bodyStyle}>An experiment in critical thinking and creative expression!</p>
+          </Responsive>
+          <Responsive maxDeviceWidth={1023}>
+           <p style={headStyleM}>Thought/Culture</p>
+           <p style={bodyStyleM}>An experiment in critical thinking and creative expression!</p>
+          </Responsive>
+
         </header>
 
         <main>
+        <Responsive minDeviceWidth={1024}>
           <div style={galleryStyle}>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"/>
-                <div style={tint1}>Chronicles of Funk: Volume 2</div>
-              </div>
+            <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"
+            textStyle={tint1}
+            text="Chronicles of Funk: Volume 2"
+            imgStyle={imgStyle}/>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"/>
-                <div style={tint2}> Battleground Dakota: Day 268</div>
-              </div>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"/>
-                <div style={tint3}>Augusta stars unite at Sky City.</div>
-              </div>
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"
+            textStyle={tint2}
+            text="Battleground Dakota: Day 268"
+            imgStyle={imgStyle}/>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"/>
-                <div style={tint4}>The war in Syria that no one is talking about.</div>
-              </div>
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"
+            textStyle={tint3}
+            text="Augusta stars unite at Sky City."
+            imgStyle={imgStyle}/>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"/>
-                <div style={tint5}>Chronicles of Funk: Volume 1</div>
-              </div>
+            <ImgBlock imgSource="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"
+            textStyle={tint4}
+            text="The war in Syria that no one is talking about."
+            imgStyle={imgStyle}/>
 
-              <div style={imgStyle}>
-                <img style={img} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"/>
-                <div style={tint6}>The metamorphosis of Goodman.</div>
-              </div>
+            <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"
+            textStyle={tint5}
+            text="Chronicles of Funk: Volume 1"
+            imgStyle={imgStyle}/>
+
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"
+            textStyle={tint6}
+            text="The metamorphosis of Goodman."
+            imgStyle={imgStyle}/>
 
           </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+
+        <div style={galleryStyleM}>
+
+          <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"
+          textStyle={tint1}
+          text="Chronicles of Funk: Volume 2"
+          imgStyle={imgStyleM}/>
+
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"
+          textStyle={tint2}
+          text="Battleground Dakota: Day 268"
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"
+          textStyle={tint3}
+          text="Augusta stars unite at Sky City."
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"
+          textStyle={tint4}
+          text="The war in Syria that no one is talking about."
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"
+          textStyle={tint5}
+          text="Chronicles of Funk: Volume 1"
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"
+          textStyle={tint6}
+          text="The metamorphosis of Goodman."
+          imgStyle={imgStyleM}/>
+
+        </div>
+        </Responsive>
         </main>
 
         <footer>
