@@ -9,92 +9,9 @@ import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
 import ImgBlock from 'components/ImgBlock';
-export default class Home extends React.PureComponent {
+export default class Home extends React.PureComponent
 
-  constructor(props){
-    super(props);
-    this.state={
-      articles:[
-        {
-          img:"https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w",
-          title:"Chronicles of Funk: Volume 2",
-          body:"",
-          tint:"tint1",
-        },
-
-        {
-          img:"https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289",
-          title:"Battleground Dakota: Day 268",
-          body:"",
-          tint:"tint2"
-        },
-
-        {
-          img:"https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1",
-          title:"Augusta stars unite at Sky City.",
-          body:"",
-          tint:"tint3"
-        },
-
-        {
-          img:"https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14",
-          title:"The war in Syria that no one is talking about.",
-          body:"",
-          tint:"tint4"
-        },
-
-        {
-          img:"https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w",
-          title:"Chronicles of Funk: Volume 1",
-          body:"",
-          tint:"tint5"
-        },
-
-        {
-          img:"https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543",
-          title:"The metamorphosis of Goodman.",
-          body:"",
-          tint:"tint6"
-        },
-      ],
-      activeIndex:0,
-      activeArticle:""
-
-    }
-  }
-
-  componentWillMount(){
-    this.setState({
-      activeArticle:this.state.articles[0]
-    })
-  }
-
-  componentDidMount(){
-    var _this=this;
-    setInterval(function(){
-      _this.nextArticle();
-    },1000)
-  }
-
-  nextArticle = () => {
-    var activeIndex = this.state.activeIndex;
-    var nextIndex = activeIndex + 1;
-    if(nextIndex > this.state.articles.length)
-    {
-      nextIndex = 0;
-    }
-    for(var i = 0; i < this.state.articles.length; i++){
-      if(i == nextIndex){
-        this.setState({
-          activeArticle:this.state.articles[i]
-        })
-      }
-    }
-    this.setState({
-      activeIndex: nextIndex
-    })
-  }
-
+{
   render() {
     const bannerStyle={
       width:"100%",
@@ -115,7 +32,6 @@ export default class Home extends React.PureComponent {
       width:"100%",
       background:"#ffffff",
       zIndex:"99999",
-      top:"0",
 
     }
 
@@ -197,9 +113,7 @@ export default class Home extends React.PureComponent {
     const galleryStyle={
       display:"flex",
       flexDirection:"row",
-      justifyContent:"flex-end",
-      padding:"45px",
-      paddingTop:"200px",
+      flexWrap:"wrap",
 
     }
 
@@ -357,14 +271,6 @@ export default class Home extends React.PureComponent {
 
     }
 
-    const headerStyle={
-      width:"100%",
-      height:"800px",
-      background:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17498852_10203050802146811_167883510515255155_n.jpg?oh=228a9cb1167e75d490fd476493c5d1a1&oe=59646B38)",
-      backgroundSize:"cover",
-
-
-    }
 
     return (
       <div>
@@ -385,26 +291,12 @@ export default class Home extends React.PureComponent {
             <Link style={linkStyleM} to= '/culture'>Culture </Link>
             <Link style={linkStyleM} to= '/shop'>Shop </Link>
           </div>
+
         </Responsive>
 
-        <header style={headerStyle}>
+        <header>
 
-          <Responsive minDeviceWidth={1024}>
-            <div style={galleryStyle}>
-
-              <ImgBlock imgSource={this.state.activeArticle.img}
-              textStyle={tint1}
-              text={this.state.activeArticle.title}
-              imgStyle={imgStyle}/>
-
-            </div>
-          </Responsive>
-
-
-
-        </header>
-
-        <main>
+          <img style={bannerStyle} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10653515_4741856600188_3443636912086499995_n.jpg?oh=16a984235c16e49ff497da53dc70797c&oe=595EE6DE"/>
 
 
           <Responsive minDeviceWidth={1024}>
@@ -416,47 +308,82 @@ export default class Home extends React.PureComponent {
            <p style={bodyStyleM}>An experiment in critical thinking and creative expression!</p>
           </Responsive>
 
+        </header>
 
+        <main>
+        <Responsive minDeviceWidth={1024}>
+          <div style={galleryStyle}>
 
-        <Responsive maxDeviceWidth={1023}>
-          <div style={galleryStyleM}>
-            <ImgBlock   imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb 86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"
+            <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"
             textStyle={tint1}
             text="Chronicles of Funk: Volume 2"
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
 
 
-            <ImgBlock   imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?o h=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"
             textStyle={tint2}
             text="Battleground Dakota: Day 268"
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
 
-            <ImgBlock   imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538  657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"
             textStyle={tint3}
             text="Augusta stars unite at Sky City."
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
 
-            <ImgBlock   imgSource="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-sy  ria.jpg?itok=qxfNiu14"
+            <ImgBlock imgSource="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"
             textStyle={tint4}
             text="The war in Syria that no one is talking about."
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
 
-            <ImgBlock   imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/  58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"
+            <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"
             textStyle={tint5}
             text="Chronicles of Funk: Volume 1"
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
 
-            <ImgBlock   imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?  oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"
+            <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"
             textStyle={tint6}
             text="The metamorphosis of Goodman."
-            imgStyle={imgStyleM}/>
+            imgStyle={imgStyle}/>
+
           </div>
         </Responsive>
+        <Responsive maxDeviceWidth={1023}>
 
-          <div style={vidStyle}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM" frameborder="0" allowfullscreen></iframe>
-          </div>
+        <div style={galleryStyleM}>
 
+          <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58bc4b9bbb7f1e8f71caab38/1488735138453/?format=750w"
+          textStyle={tint1}
+          text="Chronicles of Funk: Volume 2"
+          imgStyle={imgStyleM}/>
+
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1474386_3773444550492_1255969500_n.jpg?oh=83790fe64dc3acb182c9eafefcd59b33&oe=595A4289"
+          textStyle={tint2}
+          text="Battleground Dakota: Day 268"
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/13346971_10100791122022319_3474033419697538657_n.jpg?oh=f3d7a4106001bd470b8c1a41bc57168d&oe=5959B8A1"
+          textStyle={tint3}
+          text="Augusta stars unite at Sky City."
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://files.foreignaffairs.com/styles/large-crop-landscape/s3/taxonomy-images/region-syria.jpg?itok=qxfNiu14"
+          textStyle={tint4}
+          text="The war in Syria that no one is talking about."
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://static1.squarespace.com/static/55b94057e4b0d0f8999a41f8/57126c1927d4bdbd04e0bb86/58b3620bf7d1ff7aff6ff300/1488151058766/?format=750w"
+          textStyle={tint5}
+          text="Chronicles of Funk: Volume 1"
+          imgStyle={imgStyleM}/>
+
+          <ImgBlock imgSource="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=52b0ed5ee4dc96d3addd685ffcb028a5&oe=59650543"
+          textStyle={tint6}
+          text="The metamorphosis of Goodman."
+          imgStyle={imgStyleM}/>
+
+        </div>
+        </Responsive>
         </main>
 
         <footer>
