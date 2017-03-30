@@ -35,8 +35,8 @@ export default function createRoutes() {
     },
 
     {
-    path: '/thought',
-    name: 'Thought',
+    path: '/media',
+    name: 'Media',
     getComponent(nextState, cb) {
      import('containers/Home')
        .then(loadModule(cb))
@@ -46,8 +46,8 @@ export default function createRoutes() {
 
 
     {
-    path: '/culture',
-    name: 'Culture',
+    path: '/tour',
+    name: 'Tour',
     getComponent(nextState, cb) {
      import('containers/Home')
        .then(loadModule(cb))
