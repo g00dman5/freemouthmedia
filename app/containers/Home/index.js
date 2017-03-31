@@ -8,7 +8,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
-import ImgBlock from 'components/ImgBlock';
+import NavLeft from 'material-ui/svg-icons/navigation/chevron-left';
+import NavRight from 'material-ui/svg-icons/navigation/chevron-right';
+import NavUp from 'material-ui/svg-icons/navigation/expand-less';
+import NavDown from 'material-ui/svg-icons/navigation/expand-more';
+import MoreOver from 'material-ui/svg-icons/navigation/more-horiz';
+import MoreUp from 'material-ui/svg-icons/navigation/more-vert';
+import BurgerMenu from 'material-ui/svg-icons/navigation/menu';
+
 export default class Home extends React.PureComponent
 
 {
@@ -21,7 +28,6 @@ export default class Home extends React.PureComponent
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      background:"rgb(0, 0, 0, .0",
       zIndex:"99999",
 
     }
@@ -60,11 +66,13 @@ export default class Home extends React.PureComponent
       minHeight:"100vh",
       backgroundSize:"cover",
       backgroundPosition:"center center",
+      backgroundAttachment:"scroll",
 
     }
 
     const vidScreen={
-      backgroundSize:"cover",
+      position:"relative"
+
     }
 
     return (
@@ -97,7 +105,19 @@ export default class Home extends React.PureComponent
 
         <main>
 
-            <iframe style={vidScreen} src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <NavLeft color="#ffffff"/>
+        <NavRight color="#ffffff"/>
+        <NavUp color="#ffffff"/>
+        <NavDown color="#ffffff"/>
+        <MoreOver color="#ffffff"/>
+        <MoreUp color="#ffffff"/>
+        <BurgerMenu color="#ffffff"/>
+
+
+
+
+
+
 
 
 
