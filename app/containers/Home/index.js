@@ -67,11 +67,114 @@ export default class Home extends React.PureComponent
       backgroundSize:"cover",
       backgroundPosition:"center center",
       backgroundAttachment:"scroll",
+      display:"block"
 
     }
 
     const vidScreen={
       position:"relative"
+
+    }
+
+    const NavLeftStyle={
+      color:"#c0c0c0",
+      position:"absolute",
+      top:"50%",
+      width:"64px",
+      height:"64px",
+      left:"0px",
+    }
+
+    const NavRightStyle={
+      color:"#c0c0c0",
+      position:"absolute",
+      top:"50%",
+      width:"64px",
+      height:"64px",
+      right:"0px"
+
+    }
+
+    const NavUpStyle={
+      color:"#ffffff",
+    }
+
+    const NavDownStyle={
+      color:"#ffffff",
+    }
+
+    const MoreOverStyle={
+      color:"#c0c0c0",
+      position:"absolute",
+      bottom:"30px",
+      width:"100%",
+      height:"70px"
+
+
+    }
+
+    const MoreUpStyle={
+      color:"#ffffff",
+    }
+
+    const burgerMenuStyleM={
+      color:"#c0c0c0",
+      position:"absolute",
+      height:"50px",
+      width:"60px",
+      top:"0",
+      left:"0",
+      margin:"auto"
+
+
+
+
+
+
+    }
+
+    const NavLeftStyleM={
+      color:"#c0c0c0",
+      position:"absolute",
+      top:"50%",
+      width:"64px",
+      height:"64px",
+      left:"1em"
+    }
+
+    const NavRightStyleM={
+      color:"#ffffff",
+      position:"absolute",
+      top:"50%",
+      width:"64px",
+      height:"64px",
+      right:"1em"
+    }
+
+    const MoreOverStyleM={
+      color:"#c0c0c0",
+      position:"absolute",
+      bottom:"5px",
+      width:"100%",
+      height:"40px"
+
+    }
+
+    const articleStyle={
+      boxSizing:"content-box",
+      marginTop:"0.7em",
+
+
+    }
+
+
+    const pStyle={
+      color:"#ffffff",
+      fontSize:"45px",
+      fontFamily:"'Squada One', cursive",
+      bottom:"auto",
+
+
 
     }
 
@@ -88,12 +191,8 @@ export default class Home extends React.PureComponent
           </div>
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
-          <div style={mobileNav}>
-            <Link style={linkStyleM} to= '/media'>Media </Link>
-            <Link style={linkStyleM} to= '/'> Home </Link>
-            <Link style={linkStyleM} to= '/tour'>Tour </Link>
-            <Link style={linkStyleM} to= '/shop'>Shop </Link>
-          </div>
+
+
         </Responsive>
 
         <header>
@@ -104,14 +203,25 @@ export default class Home extends React.PureComponent
         </header>
 
         <main>
+         <Responsive minDeviceWidth={1024}>
+          <div>
+            <NavLeft style={NavLeftStyle}/>
+            <NavRight style={NavRightStyle}/>
+            <NavUp style={NavUpStyle}/>
+            <NavDown style={NavDownStyle}/>
+            <MoreOver style={MoreOverStyle}/>
+          </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div>
+           <NavLeft style={NavLeftStyleM}/>
+           <NavRight style={NavRightStyleM}/>
+           <MoreOver style={MoreOverStyleM}/>
+           <BurgerMenu style={burgerMenuStyleM}/>
+          </div>
+        </Responsive>
 
-        <NavLeft color="#ffffff"/>
-        <NavRight color="#ffffff"/>
-        <NavUp color="#ffffff"/>
-        <NavDown color="#ffffff"/>
-        <MoreOver color="#ffffff"/>
-        <MoreUp color="#ffffff"/>
-        <BurgerMenu color="#ffffff"/>
+
 
 
 
