@@ -67,7 +67,8 @@ export default class Home extends React.PureComponent
       backgroundSize:"cover",
       backgroundPosition:"center center",
       backgroundAttachment:"scroll",
-      display:"block"
+      display:"block",
+
 
     }
 
@@ -178,6 +179,11 @@ export default class Home extends React.PureComponent
 
     }
 
+    const vidStyle={
+      position:"relative",
+      bottom:"20px"
+    }
+
     return (
       <div style={container}>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
@@ -221,7 +227,9 @@ export default class Home extends React.PureComponent
           </div>
         </Responsive>
 
-
+        <div>
+          <iframe style={vidStyle} width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM" frameborder="1px" allowfullscreen></iframe>
+        </div>
 
 
 

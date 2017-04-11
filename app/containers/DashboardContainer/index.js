@@ -85,8 +85,8 @@ export default class DashboardContainer extends React.PureComponent {
         <input onChange={this.handleTitletype} type="text" placeholder="title"/>
         <textarea onChange={this.handleBody} placeholder="body"></textarea>
         <input onChange={this.handleImage} type="file"/>
-        <input onTouchTap={this.storetype} type="submit"/>
-        <img src={this.storeArticle}
+        <input onTouchTap={this.storeArticle} type="submit"/>
+        <img src={this.state.preview}/>
         />
 
 
