@@ -48,7 +48,7 @@ export default function createRoutes() {
     path: '/media',
     name: 'Media',
     getComponent(nextState, cb) {
-     import('containers/Home')
+     import('containers/Media')
        .then(loadModule(cb))
        .catch(errorLoading);
       },

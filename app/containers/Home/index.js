@@ -16,9 +16,7 @@ import MoreOver from 'material-ui/svg-icons/navigation/more-horiz';
 import MoreUp from 'material-ui/svg-icons/navigation/more-vert';
 import BurgerMenu from 'material-ui/svg-icons/navigation/menu';
 
-export default class Home extends React.PureComponent
-
-{
+export default class Home extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
@@ -62,7 +60,10 @@ export default class Home extends React.PureComponent
     }
 
     const background={
-      color:"#000000",
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17498852_10203050802146811_167883510515255155_n.jpg?oh=c3f01406ad2313d96f182dcf6eec7930&oe=598BF838)",
+      minHeight:"100vh",
+      backgroundRepeat:"repeat-y",
+
 
 
     }
@@ -131,16 +132,16 @@ export default class Home extends React.PureComponent
       top:"50%",
       width:"64px",
       height:"64px",
-      left:"1em"
+      left:"-1em"
     }
 
     const NavRightStyleM={
-      color:"#ffffff",
+      color:"#c0c0c0",
       position:"fixed",
       top:"50%",
       width:"64px",
       height:"64px",
-      right:"1em"
+      right:"-.5em"
     }
 
     const MoreOverStyleM={
@@ -178,6 +179,7 @@ export default class Home extends React.PureComponent
       padding:"15px",
       paddingLeft:"15px",
       paddingRight:"15px",
+      opacity:"0.9"
 
 
 
@@ -188,8 +190,6 @@ export default class Home extends React.PureComponent
       color:"000000",
       fontSize:"25px",
       fontFamily:"'Squada One', cursive",
-      padding:"15px",
-      paddingLeft:"15px",
       paddingRight:"15px",
     }
 
@@ -198,7 +198,21 @@ export default class Home extends React.PureComponent
 
     }
 
+    const image2={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5",
+      minHeight:"100vh",
+      backgroundSize:"cover",
+      backgroundPosition:"center center",
+      backgroundAttachment:"scroll",
+      display:"block",
+      padding:"15px",
+      paddingLeft:"15px",
+      paddingRight:"15px",
+
+    }
+
     return (
+
       <div style={background}>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
@@ -270,6 +284,40 @@ export default class Home extends React.PureComponent
         </div>
 
         <div style={vidScreen}><iframe width="100%" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe></div>
+
+        <div style={pStyle}>
+        <p><span style={span}>Cigarrette bomb, code red</span></p>
+
+        <p>Empty belly bands play full harmonics to AK-metronome</p>
+
+        <p>Gassed up bodies on sad lady tear ponds</p>
+
+        <p>Body searched and found missing beneath a plate of money.</p>
+
+        <p>Greedy hands with sticky fingers</p>
+
+        <p>Always callin my phone so late and early in the mourning</p>
+
+        <p>Why do all the saints sleep til noon?</p>
+
+        <p>Don’t they know that heaven follows that dawn? And hell too?</p>
+
+        <p>Who will open the graves and let compassion rain soak the indifferent dust?</p>
+
+        <p>When will the war I wage be against my self interest? When can my cold fingers rest, peaceful beside my brothers window? Unashamed.</p>
+
+        <p>When can I call a favor to the president?</p>
+
+        <p>Is Congress asleep for good?</p>
+
+        <p>No code reds let the daytime gods look to find me.</p>
+
+        <p>Just a jangling guitar and the hum of stale overblown sideways shit-talk high school bathroom shot tape playback a billion times news real reel.</p>
+
+        <p>AKs somewhere far far away. Betweeen Ohio and Trout LAKE, NY. Maybe bombs in Statesboro, GA. Or back of your home, New Mexico. Blow your fuckin brains out before the cigarettes do because peace is dying fast.</p>
+        </div>
+
+        <div style={image2}></div>
 
 
     <div>
