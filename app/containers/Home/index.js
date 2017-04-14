@@ -59,14 +59,6 @@ export default class Home extends React.PureComponent {
 
     }
 
-    const background={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17498852_10203050802146811_167883510515255155_n.jpg?oh=c3f01406ad2313d96f182dcf6eec7930&oe=598BF838)",
-      minHeight:"100vh",
-      backgroundRepeat:"repeat-y",
-
-
-
-    }
 
 
     const NavLeftStyle={
@@ -175,11 +167,13 @@ export default class Home extends React.PureComponent {
     const pStyle={
       color:"#330000",
       fontSize:"18px",
-      fontFamily:"'Squada One', cursive",
+      fontFamily:"'Homenaje', sans-serif",
+      boxSizing:"content-box",
       padding:"15px",
       paddingLeft:"15px",
       paddingRight:"15px",
-      opacity:"0.9"
+      paddingTop:"0px",
+      overflow:"hidden"
 
 
 
@@ -190,7 +184,6 @@ export default class Home extends React.PureComponent {
       color:"000000",
       fontSize:"25px",
       fontFamily:"'Squada One', cursive",
-      paddingRight:"15px",
     }
 
     const vidScreen={
@@ -211,9 +204,44 @@ export default class Home extends React.PureComponent {
 
     }
 
+    const backgroundwrapper={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
+      minHeight:"100vh",
+      backgroundRepeat:"repeat-y",
+      backgroundPosition:"center center"
+
+
+    }
+
+    const creditsBox={
+      boxSizing:"borderbox",
+      padding:"4%",
+
+    }
+
+    const caption={
+      color:"#330000",
+      fontSize:"18px",
+      fontFamily:"'Squada One', cursive",
+      fontStyle:"italic",
+      lineHeight:"1.1",
+      boxSizing:"content-box",
+      position:"relative",
+      textAlign:"right",
+      marginRight:"15px",
+    }
+
+    const birdLetter={
+      boxSizing:"content-box",
+      position:"relative",
+      fontStyle:"italic",
+
+    }
+
+
     return (
 
-      <div style={background}>
+      <div style={backgroundwrapper}>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
         <Responsive minDeviceWidth={1024}>
@@ -257,14 +285,27 @@ export default class Home extends React.PureComponent {
 
         <div style={bannerStyle}></div>
 
+        <div style={creditsBox}>
+          <div>
+            //place icon
+          </div>
+
+          <div style={caption}>
+          <p>Athens Bird</p>
+          <p>11/11/11</p>
+          <p>Augusta, Georgia</p>
+          </div>
+        </div>
+
         <div style={pStyle}>
         <p><span style={span}>George Ball, Vietnam veteran of 1967-69.</span> Also known as History Man, the Athens Bird.
         I witnessed firsthand the Bird glide out of his wheelchair like he’d just been brushed by the hems  of Jesus Christ, and WALTZ over to the owner of Knuckle Sandwiches and say “Scuse me sir, can a old nigga please get  a sandwich – FOR FREE?!”</p>
 
         <p>History Man, the Athens Bird.  A Broad Street miracle. He told me he wrote a newsletter and gave me a copy to take for myself. It was a single sheet of white paper that looked to be covered in pen illustrations and gibberish. Upon closer inspection, it was a Xeroxed copy of another piece of paper that was covered in pen illustrations and gibberish. Some of the sentences ran over to the opposite side of the paper and some of them were written in the margins perpendicular to others. Hand drawn borders and underlines divided the different sections of the newsletter into barely decipherable nuggets of meaninglessness.</p>
 
-        <p>The illustration was a stick figure drawing of a bird. Written at the top center of the page, I took it as the brand icon and letterhead and started there. As best as a mere human could possibly do, I will try to relay what I was shown. Dear reader, I cannot make this shit up:</p>
+        <p>The illustration was a stick figure drawing of a bird. Written at the top center of the page, I took it as the brand icon and letterhead and started there. As best as a mere human could possibly do, I will try to relay what I was shown. Dear reader, I wish I could make this shit up:</p>
 
+        <span style={birdLetter}>
         <p>ATHENS Bird is not feeling at his best and he and his History Man are citizens of Athens, Clarke   County, Georgia is requesting all concern people of this town Classic City, which mean Learning to call  endandger missing person hotline or call the Clarke County Sheriff Ira Edward Jr or Police Chief Jackie Lumpkin of any news of Mayflower Restaurant employee Della an yellow skin, 5-7’ 130 LB Female that is missing fer over 9 months.</p>
 
         <p>Terry Lynn Hunter, my second cusion, is also dead and Mr. Colling also and first a female Caucasian girl was Jimmy first Athens KILL AND Jimmy was boyfriend to all four girls. He was living on Farview with bad apple Tommy Brown and now its said he cut off his ankle brace and left town . Chicago, South Carolina was said he come from.</p>
@@ -278,9 +319,9 @@ export default class Home extends React.PureComponent {
 
         <p>Giving those so call homeless people money you are causing strokes, seizures to them as paramedic can prove treating them several times they are on crack whisky.</p>
 
-        <p>There are seven Caucasian females living alone and I have observe one black one white male both muscle around 6’1 240-260 lbs. Knocking on their door and coming from around their apartment and even the black guy was sitting on the porch and the first murder of a Caucasian female haven’t even been found out. The surspected killer probley running afraid and thanks to his daddy power he getting away more on that story in the next edition look for it.</p>
+        <p>There are seven Caucasian females living alone and I have observe one black one white male both muscle around 6’1 240-260 lbs. Knocking on their door and coming from around their apartment and even the black guy was sitting on the porch and the first murder of a Caucasian female haven’t even been found out. The surspected killer probley running afraid and thanks to his daddy power he getting away more on that story in the next edition look for it.</p></span>
 
-        <p>I’m still looking for it. </p>
+        <p>I'm still waiting for the next edition. But when I get it I'll be sure to pass it along to you. </p>
         </div>
 
         <div style={vidScreen}><iframe width="100%" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe></div>

@@ -143,8 +143,8 @@ export default class Media extends React.PureComponent {
 
     }
 
-    const background={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17498852_10203050802146811_167883510515255155_n.jpg?oh=c3f01406ad2313d96f182dcf6eec7930&oe=598BF838)",
+    const backgroundwrapper={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
       right:"45px",
       minHeight:"100vh",
       backgroundRepeat:"repeat-y",
@@ -154,16 +154,27 @@ export default class Media extends React.PureComponent {
     }
 
     const vidScreen={
+      boxSizing:"border-box",
       position:"relative",
-      display:"block",
+      display:"grid",
+      padding:"2%",
+      marginRight:"20%",
+      marginLeft:"20%",
+      marginTop:"2%",
+      marginBottom:"2%",
 
+
+
+    }
+
+    const soundcloudFrame={
 
     }
 
 
 
     return (
-      <div style={background}>
+      <div style={backgroundwrapper}>
         <Helmet title="Media" meta={[ { name: 'description', content: 'Description of Media' }]}/>
 
 
@@ -208,11 +219,14 @@ export default class Media extends React.PureComponent {
             </div>
           </Responsive>
 
-          <div style={vidScreen}><iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe></div>
+          <div style={soundcloudFrame}><iframe width="auto" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
 
-          <div style={vidScreen}><iframe width="560" height="315" src="https://www.youtube.com/embed/Eo60_OaYUOs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+          <div style={vidScreen}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
 
-          <div><iframe width="560" height="315" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Eo60_OaYUOs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+         </div>
+
 
 
 
