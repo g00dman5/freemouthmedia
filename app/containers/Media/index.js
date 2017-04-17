@@ -154,14 +154,14 @@ export default class Media extends React.PureComponent {
     }
 
     const vidScreen={
+      width:"100%",
+      height:"50%",
       boxSizing:"border-box",
-      position:"relative",
+      position:"absolute",
       display:"grid",
-      padding:"2%",
-      marginRight:"20%",
-      marginLeft:"20%",
-      marginTop:"2%",
-      marginBottom:"2%",
+      margin:"34px",
+      left:"0",
+      maxDeviceWidth:"100%"
 
 
 
@@ -190,6 +190,10 @@ export default class Media extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
+              <Link style={linkStyleM} to= '/media'>Media </Link>
+              <Link style={linkStyleM} to= '/'> Home </Link>
+              <Link style={linkStyleM} to= '/tour'>Tour </Link>
+              <Link style={linkStyleM} to= '/shop'>Shop </Link>
             </div>
           </Responsive>
 
@@ -215,16 +219,17 @@ export default class Media extends React.PureComponent {
              <NavLeft style={NavLeftStyleM}/>
              <NavRight style={NavRightStyleM}/>
              <MoreOver style={MoreOverStyleM}/>
-             <BurgerMenu style={burgerMenuStyleM}/>
             </div>
           </Responsive>
+
+          <div></div>
 
           <div style={soundcloudFrame}><iframe width="auto" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
 
           <div style={vidScreen}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="5" allowfullscreen></iframe>
 
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/Eo60_OaYUOs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Eo60_OaYUOs?rel=0&amp;showinfo=0" frameborder="5" allowfullscreen></iframe>
          </div>
 
 

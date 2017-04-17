@@ -161,6 +161,9 @@ export default class Home extends React.PureComponent {
       backgroundPosition:"center center",
       backgroundAttachment:"scroll",
       display:"block",
+      zIndex:"99999",
+
+
     }
 
 
@@ -253,7 +256,11 @@ export default class Home extends React.PureComponent {
           </div>
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
-          <div>
+          <div style={mobileNav}>
+            <Link style={linkStyleM} to= '/media'>Media </Link>
+            <Link style={linkStyleM} to= '/'> Home </Link>
+            <Link style={linkStyleM} to= '/tour'>Tour </Link>
+            <Link style={linkStyleM} to= '/shop'>Shop </Link>
           </div>
         </Responsive>
 
@@ -279,11 +286,11 @@ export default class Home extends React.PureComponent {
            <NavLeft style={NavLeftStyleM}/>
            <NavRight style={NavRightStyleM}/>
            <MoreOver style={MoreOverStyleM}/>
-           <BurgerMenu style={burgerMenuStyleM}/>
           </div>
         </Responsive>
 
         <div style={bannerStyle}></div>
+
 
         <div style={creditsBox}>
           <div>
