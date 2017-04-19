@@ -1,6 +1,6 @@
 /*
  *
- * Media
+ * Ttour
  *
  */
 
@@ -16,8 +16,7 @@ import MoreOver from 'material-ui/svg-icons/navigation/more-horiz';
 import MoreUp from 'material-ui/svg-icons/navigation/more-vert';
 import BurgerMenu from 'material-ui/svg-icons/navigation/menu';
 
-
-export default class Media extends React.PureComponent {
+export default class Ttour extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
@@ -59,6 +58,8 @@ export default class Media extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
 
     }
+
+
 
     const NavLeftStyle={
       color:"#c0c0c0",
@@ -132,7 +133,7 @@ export default class Media extends React.PureComponent {
       top:"50%",
       width:"64px",
       height:"64px",
-      right:"-1em",
+      right:"-.5em"
     }
 
     const MoreOverStyleM={
@@ -144,62 +145,18 @@ export default class Media extends React.PureComponent {
 
     }
 
-    const backgroundwrapper={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
-      right:"45px",
-      minHeight:"100vh",
-      backgroundRepeat:"repeat-y",
-
-
-
-    }
-
-    const vidScreen={
-      width:"855px",
-      height:"100%",
-      boxSizing:"border-box",
-      position:"absolute",
-      display:"grid",
-      paddingTop:"5px",
-      paddingLeft:"30px",
-      paddingRight:"30px",
-      left:"0",
-      textAlign:"center",
-
-    }
-
-    const vidScreenM={
-      position:"relative",
-      width:"100%",
-      height:"315",
-
-
-    }
-
-
-    const soundcloudFrame={
+    const tourWidget={
       boxSizing:"border-box",
       position:"relative",
-      paddingTop:"40px",
-      paddingLeft:"2px",
-      paddingRight:"2px",
 
     }
 
-    const soundcloudFrameM={
-      width:"100%",
-      height:"100",
-
-    }
 
 
 
     return (
-      <div style={backgroundwrapper}>
-        <Helmet title="Media" meta={[ { name: 'description', content: 'Description of Media' }]}/>
-
-
-
+      <div>
+        <Helmet title="Ttour" meta={[ { name: 'description', content: 'Description of Ttour' }]}/>
 
           <Responsive minDeviceWidth={1024}>
             <div style={navStyle}>
@@ -210,7 +167,7 @@ export default class Media extends React.PureComponent {
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
-            <div>
+            <div style={mobileNav}>
               <Link style={linkStyleM} to= '/media'>Media </Link>
               <Link style={linkStyleM} to= '/'> Home </Link>
               <Link style={linkStyleM} to= '/tour'>Tour </Link>
@@ -242,38 +199,19 @@ export default class Media extends React.PureComponent {
              <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
-
-          <div></div>
-
-          <Responsive minDeviceWidth={1024}>
-            <div style={soundcloudFrame}>
-              <iframe width="100%" height="100" scrolling="no" frameborder="2px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-            </div>
-          </Responsive>
-          <Responsive maxDeviceWidth={1023}>
-            <div style={soundcloudFrameM}>
-              <iframe scrolling="no" frameborder="2px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-            </div>
-          </Responsive>
-
-          <Responsive minDeviceWidth={1024}>
-
-          </Responsive>
-          <Responsive maxDeviceWidth={1023}>
-
-          </Responsive>
+        </main>
 
 
 
 
+         <div>
+           <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="Swans" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#E74832" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
+          </div>
 
+        <Responsive maxDeviceWidth={1023}>
 
+        </Responsive>
 
-          </main>
-
-
-          <footer>
-          </footer>
       </div>
     );
   }

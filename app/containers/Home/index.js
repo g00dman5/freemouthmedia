@@ -326,12 +326,14 @@ export default class Home extends React.PureComponent {
 
         <p>Giving those so call homeless people money you are causing strokes, seizures to them as paramedic can prove treating them several times they are on crack whisky.</p>
 
-        <p>There are seven Caucasian females living alone and I have observe one black one white male both muscle around 6’1 240-260 lbs. Knocking on their door and coming from around their apartment and even the black guy was sitting on the porch and the first murder of a Caucasian female haven’t even been found out. The surspected killer probley running afraid and thanks to his daddy power he getting away more on that story in the next edition look for it.</p></span>
+        <p>There are seven Caucasian females living alone and I have observe one black one white male both muscle around 6’1 240-260 lbs. Knocking on their door and coming from around their apartment and even the black guy was sitting on the porch and the first murder of a Caucasian female haven’t even been found out. The suspected killer probley running afraid and thanks to his daddy power he getting away more on that story in the next edition look for it.</p></span>
 
-        <p>I'm still waiting for the next edition. But when I get it I'll be sure to pass it along to you. </p>
+        <p>Rest assured, dear readers, when I find that next edition I'll pass it along to you. </p>
         </div>
 
-        <div style={vidScreen}><iframe width="100%" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe></div>
+        <div style={vidScreen}>
+          <iframe width="100%" height="415" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+        </div>
 
         <div style={pStyle}>
         <p><span style={span}>Cigarrette bomb, code red</span></p>

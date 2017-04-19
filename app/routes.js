@@ -26,7 +26,7 @@ export default function createRoutes() {
 
 
     {
-    path: '/DashboardContainer',
+    path: '/dashboardcontainer',
     name: 'DashboardContainer',
     getComponent(nextState, cb) {
       import('containers/DashboardContainer')
@@ -59,11 +59,47 @@ export default function createRoutes() {
     path: '/tour',
     name: 'Tour',
     getComponent(nextState, cb) {
-     import('containers/Home')
+     import('containers/Tour')
        .then(loadModule(cb))
        .catch(errorLoading);
       },
     },
+
+    {
+    path: '/signup',
+    name: 'SignUp',
+    getComponent(nextState, cb) {
+     import('containers/signUp')
+       .then(loadModule(cb))
+       .catch(errorLoading);
+      },
+    },
+
+    {
+    path: '/signin',
+    name: 'SignIn',
+    getComponent(nextState, cb) {
+     import('containers/signIn')
+       .then(loadModule(cb))
+       .catch(errorLoading);
+      },
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
      {
