@@ -145,6 +145,18 @@ export default class Ttour extends React.PureComponent {
 
     }
 
+    const backgroundwrapper={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
+      right:"45px",
+      minHeight:"100vh",
+      backgroundRepeat:"repeat-y",
+      backgroundPosition:"center center",
+
+
+
+    }
+
+
     const tourWidget={
       boxSizing:"border-box",
       position:"relative",
@@ -155,7 +167,7 @@ export default class Ttour extends React.PureComponent {
 
 
     return (
-      <div>
+      <div style={backgroundwrapper}>
         <Helmet title="Ttour" meta={[ { name: 'description', content: 'Description of Ttour' }]}/>
 
           <Responsive minDeviceWidth={1024}>

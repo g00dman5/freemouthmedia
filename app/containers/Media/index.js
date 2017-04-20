@@ -32,6 +32,7 @@ export default class Media extends React.PureComponent {
     }
 
     const mobileNav={
+
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
       display: "flex",
@@ -39,8 +40,9 @@ export default class Media extends React.PureComponent {
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      background:"rgb(0, 0, 0, .0",
+      backgroundColor:"rgb(153, 0, 0, .5)",
       zIndex:"99999",
+
 
     }
 
@@ -149,6 +151,8 @@ export default class Media extends React.PureComponent {
       right:"45px",
       minHeight:"100vh",
       backgroundRepeat:"repeat-y",
+      backgroundPosition:"center center",
+
 
 
 
@@ -189,6 +193,29 @@ export default class Media extends React.PureComponent {
     const soundcloudFrameM={
       width:"100%",
       height:"100",
+
+    }
+
+    const playerImage={
+      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg",
+      minHeight:"100vh",
+      backgroundSize:"cover",
+      backgroundPosition:"center center",
+      backgroundAttachment:"scroll",
+      display:"block",
+      zIndex:"99999",
+
+
+    }
+
+    const playerImageM={
+      left:"25",
+      position:"relative",
+      padding:"4px",
+      width:"300",
+      height:"266",
+      marginBottom:"5px"
+
 
     }
 
@@ -243,16 +270,23 @@ export default class Media extends React.PureComponent {
             </div>
           </Responsive>
 
-          <div></div>
+          <Responsive minDeviceWidth={1024}>
+            <div style={playerImage}></div>
+          </Responsive>
+          <Responsive maxDeviceWidth={1023}>
+            <div style={playerImageM}>
+              <a href="http://www.studiorussophotography.com/p879804525/e35d5df0d"><img src="http://www.studiorussophotography.com/img/s/v-2/p903208717-3.jpg"width="100%" height="100%" alt="Studio Russo Photography: Music &emdash; " /></a>
+            </div>
+          </Responsive>
 
           <Responsive minDeviceWidth={1024}>
             <div style={soundcloudFrame}>
-              <iframe width="100%" height="100" scrolling="no" frameborder="2px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div style={soundcloudFrameM}>
-              <iframe scrolling="no" frameborder="2px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240030267&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             </div>
           </Responsive>
 
