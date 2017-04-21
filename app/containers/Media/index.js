@@ -191,12 +191,12 @@ export default class Media extends React.PureComponent {
     }
 
     const soundcloudFrameM={
-      width:"100%",
-      height:"100",
+      padding:"5px",
+      margin:"20px",
 
     }
 
-    const playerImage={
+    const bannerImage={
       backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg",
       minHeight:"100vh",
       backgroundSize:"cover",
@@ -255,8 +255,8 @@ export default class Media extends React.PureComponent {
           <main>
            <Responsive minDeviceWidth={1024}>
             <div>
-              <NavLeft style={NavLeftStyle}/>
-              <NavRight style={NavRightStyle}/>
+              <Link to="/shop"><NavLeft style={NavLeftStyle}/></Link>
+              <Link to="/"><NavRight style={NavRightStyle}/></Link>
               <NavUp style={NavUpStyle}/>
               <NavDown style={NavDownStyle}/>
               <MoreOver style={MoreOverStyle}/>
@@ -264,19 +264,17 @@ export default class Media extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
-             <NavLeft style={NavLeftStyleM}/>
-             <NavRight style={NavRightStyleM}/>
+             <Link to="/shop"><NavLeft style={NavLeftStyleM}/></Link>
+             <Link to="/"><NavRight style={NavRightStyleM}/></Link>
              <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
 
-          <Responsive minDeviceWidth={1024}>
-            <div style={playerImage}></div>
-          </Responsive>
+
+            <div style={bannerImage}></div>
+
           <Responsive maxDeviceWidth={1023}>
-            <div style={playerImageM}>
-              <a href="http://www.studiorussophotography.com/p879804525/e35d5df0d"><img src="http://www.studiorussophotography.com/img/s/v-2/p903208717-3.jpg"width="100%" height="100%" alt="Studio Russo Photography: Music &emdash; " /></a>
-            </div>
+
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>

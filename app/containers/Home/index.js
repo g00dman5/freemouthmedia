@@ -154,7 +154,7 @@ export default class Home extends React.PureComponent {
     }
 
 
-    const bannerStyle={
+    const bannerImage={
       backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p693323167-5.jpg",
       minHeight:"100vh",
       backgroundSize:"cover",
@@ -190,22 +190,29 @@ export default class Home extends React.PureComponent {
     }
 
     const vidScreen={
-      position:"relative"
+      position:"relative",
+      margin:"15px",
+      paddingLeft:"10",
+      paddingRight:"10",
+      textAlign:"center"
 
     }
 
-    const image2={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5",
-      minHeight:"100vh",
-      backgroundSize:"cover",
-      backgroundPosition:"center center",
-      backgroundAttachment:"scroll",
+    const posterGallery={
+      boxSizing:"content-box",
       display:"block",
-      padding:"15px",
       paddingLeft:"15px",
       paddingRight:"15px",
 
+
     }
+
+    const poster={
+      padding:"2px",
+      margin:"5px",
+
+    }
+
 
     const backgroundwrapper={
       backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
@@ -274,8 +281,8 @@ export default class Home extends React.PureComponent {
         <main>
          <Responsive minDeviceWidth={1024}>
           <div>
-            <NavLeft style={NavLeftStyle}/>
-            <NavRight style={NavRightStyle}/>
+            <Link to="/media"><NavLeft style={NavLeftStyle}/></Link>
+            <Link to="/tour"><NavRight style={NavRightStyle}/></Link>
             <NavUp style={NavUpStyle}/>
             <NavDown style={NavDownStyle}/>
             <MoreOver style={MoreOverStyle}/>
@@ -283,13 +290,13 @@ export default class Home extends React.PureComponent {
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
           <div>
-           <NavLeft style={NavLeftStyleM}/>
-           <NavRight style={NavRightStyleM}/>
+           <Link to="/media"><NavLeft style={NavLeftStyleM}/></Link>
+           <Link to="/tour"><NavRight style={NavRightStyleM}/></Link>
            <MoreOver style={MoreOverStyleM}/>
           </div>
         </Responsive>
 
-        <div style={bannerStyle}></div>
+        <div style={bannerImage}></div>
 
 
         <div style={creditsBox}>
@@ -332,7 +339,7 @@ export default class Home extends React.PureComponent {
         </div>
 
         <div style={vidScreen}>
-          <iframe width="100%" height="415" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
         </div>
 
         <div style={pStyle}>
@@ -367,7 +374,20 @@ export default class Home extends React.PureComponent {
         <p>AKs somewhere far far away. Betweeen Ohio and Trout LAKE, NY. Maybe bombs in Statesboro, GA. Or back of your home, New Mexico. Blow your fuckin brains out before the cigarettes do because peace is dying fast.</p>
         </div>
 
-        <div style={image2}></div>
+        <div style={posterGallery}>
+          <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
+
+          <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/995720_10151540628512862_1243357349_n.jpg?oh=2cee9c03b2c463f06841a5a404af27c3&oe=597B60A6"/>
+
+          <img style={poster}
+          src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
+
+        <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
+
+
+        </div>
+
+
 
 
     <div>

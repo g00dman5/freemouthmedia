@@ -197,8 +197,8 @@ export default class Ttour extends React.PureComponent {
           <main>
            <Responsive minDeviceWidth={1024}>
             <div>
-              <Link to="/"><NavLeft style={NavLeftStyle}/></Link>
-              <Link to="/shop"><NavRight style={NavRightStyle}/></Link>
+              <Link to="tour"><NavLeft style={NavLeftStyle}/></Link>
+              <Link to="/media"><NavRight style={NavRightStyle}/></Link>
               <NavUp style={NavUpStyle}/>
               <NavDown style={NavDownStyle}/>
               <MoreOver style={MoreOverStyle}/>
@@ -207,7 +207,7 @@ export default class Ttour extends React.PureComponent {
           <Responsive maxDeviceWidth={1023}>
             <div>
              <Link to="/"><NavLeft style={NavLeftStyleM}/></Link>
-             <Link to="/shop"><NavRight style={NavRightStyleM}/></Link>
+             <Link to="/media"><NavRight style={NavRightStyleM}/></Link>
              <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
@@ -216,9 +216,7 @@ export default class Ttour extends React.PureComponent {
 
 
 
-         <div>
-           <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="Swans" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#E74832" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
-          </div>
+
 
         <Responsive maxDeviceWidth={1023}>
 

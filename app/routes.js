@@ -38,7 +38,7 @@ export default function createRoutes() {
     path: '/shop',
     name: 'Shop',
     getComponent(nextState, cb) {
-     import('containers/Home')
+     import('containers/Shop')
        .then(loadModule(cb))
        .catch(errorLoading);
       },
