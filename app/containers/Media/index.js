@@ -197,10 +197,9 @@ export default class Media extends React.PureComponent {
     }
 
     const bannerImage={
-      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg",
+      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
       minHeight:"100vh",
       backgroundSize:"cover",
-      backgroundPosition:"center center",
       backgroundAttachment:"scroll",
       display:"block",
       zIndex:"99999",
@@ -271,7 +270,7 @@ export default class Media extends React.PureComponent {
           </Responsive>
 
 
-            <div style={bannerImage}></div>
+          <div style={bannerImage}></div>
 
           <Responsive maxDeviceWidth={1023}>
 
@@ -279,7 +278,7 @@ export default class Media extends React.PureComponent {
 
           <Responsive minDeviceWidth={1024}>
             <div style={soundcloudFrame}>
-              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+              <iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
@@ -289,7 +288,9 @@ export default class Media extends React.PureComponent {
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>
+            <div>
 
+            </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
 

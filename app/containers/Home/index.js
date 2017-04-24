@@ -200,9 +200,12 @@ export default class Home extends React.PureComponent {
 
     const posterGallery={
       boxSizing:"content-box",
+      overflow:"hidden",
       display:"block",
       paddingLeft:"15px",
       paddingRight:"15px",
+
+
 
 
     }
@@ -210,6 +213,9 @@ export default class Home extends React.PureComponent {
     const poster={
       padding:"2px",
       margin:"5px",
+      width:"162",
+      height:"250",
+      float:"left"
 
     }
 
@@ -335,11 +341,11 @@ export default class Home extends React.PureComponent {
 
         <p>There are seven Caucasian females living alone and I have observe one black one white male both muscle around 6’1 240-260 lbs. Knocking on their door and coming from around their apartment and even the black guy was sitting on the porch and the first murder of a Caucasian female haven’t even been found out. The suspected killer probley running afraid and thanks to his daddy power he getting away more on that story in the next edition look for it.</p></span>
 
-        <p>Rest assured, dear readers, when I find that next edition I'll pass it along to you. </p>
+        <p>Rest assured, dear readers, when I find that next edition Ill pass it along to you. </p>
         </div>
 
         <div style={vidScreen}>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="1" allowFullScreen></iframe>
         </div>
 
         <div style={pStyle}>
@@ -374,19 +380,7 @@ export default class Home extends React.PureComponent {
         <p>AKs somewhere far far away. Betweeen Ohio and Trout LAKE, NY. Maybe bombs in Statesboro, GA. Or back of your home, New Mexico. Blow your fuckin brains out before the cigarettes do because peace is dying fast.</p>
         </div>
 
-        <div style={posterGallery}>
-          <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
-
-          <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/995720_10151540628512862_1243357349_n.jpg?oh=2cee9c03b2c463f06841a5a404af27c3&oe=597B60A6"/>
-
-          <img style={poster}
-          src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
-
-        <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
-
-
-        </div>
-
+      
 
 
 

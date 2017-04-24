@@ -152,7 +152,32 @@ export default class Ttour extends React.PureComponent {
       backgroundRepeat:"repeat-y",
       backgroundPosition:"center center",
 
+    }
 
+    const posterGallery={
+      boxSizing:"content-box",
+      overflow:"hidden",
+      display:"block",
+      paddingLeft:"5px",
+      paddingRight:"5px",
+
+    }
+
+    const posterM={
+      padding:"2px",
+      margin:"5px",
+      width:"162",
+      height:"250",
+      float:"left"
+
+    }
+
+    const poster={
+      padding:"2px",
+      margin:"5px",
+      width:"162",
+      height:"250",
+      float:"left"
 
     }
 
@@ -162,8 +187,6 @@ export default class Ttour extends React.PureComponent {
       position:"relative",
 
     }
-
-
 
 
     return (
@@ -214,15 +237,51 @@ export default class Ttour extends React.PureComponent {
         </main>
 
 
+        <Responsive minDeviceWidth={1024}>
 
-
-         <div>
-           <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="Swans" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#E74832" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
+          <div style={tourWidget}>
+            <script charSet="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a className="bit-widget-initializer" data-artist-name="Young Goodman Brown" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#FFFFFF" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="5" data-link-text-color="#2F95DE"></a>
           </div>
 
-        <Responsive maxDeviceWidth={1023}>
+          <div style={posterGallery}>
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/995720_10151540628512862_1243357349_n.jpg?oh=2cee9c03b2c463f06841a5a404af27c3&oe=597B60A6"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/297255_10150298172717862_72648603_n.jpg?oh=16eb022b9131d6355871742131c75bb5&oe=598BBC43"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/s960x960/883555_10151848614472862_259930318_o.jpg?oh=42e1531210304159cda59a7bb6f5af2c&oe=5983DE12"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1917798_168195342861_5984679_n.jpg?oh=5676d8db590090ea736d31e16a623aef&oe=598DBD94"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/74183_135602182861_8247101_n.jpg?oh=191aee3121139c889665d9fd041092be&oe=598F4ACF"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1915563_113201422861_4692371_n.jpg?oh=180ccd779e9aebe22864906feddd4286&oe=5999B755"/>
+
+            <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/s960x960/913909_10151430783672862_1307538094_o.jpg?oh=06a058f5fe46a8577be8fe87a2464fda&oe=5996C88D"/>
+          </div>
+
+
 
         </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+
+          <div style={posterGallery}>
+            <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
+
+            <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/995720_10151540628512862_1243357349_n.jpg?oh=2cee9c03b2c463f06841a5a404af27c3&oe=597B60A6"/>
+
+            <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
+
+            <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
+          </div>
+        </Responsive>
+
+
 
       </div>
     );
