@@ -83,7 +83,7 @@ export default class SignIn extends React.PureComponent {
 
             <div style={inputStyle}>
               <input onChange={this.handleEmail} type="text" placeholder="Email"/>
-              <input onChange={this.handlePassword} type="text" placeholder="Password"/>
+              <input onChange={this.handlePassword} type="password" placeholder="Password"/>
               <input onTouchTap={this.signIn} type="submit" placeholder="Submit"/>
             </div>
 

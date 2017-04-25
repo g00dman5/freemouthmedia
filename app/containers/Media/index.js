@@ -112,11 +112,6 @@ export default class Media extends React.PureComponent {
       left:"0",
       margin:"auto",
 
-
-
-
-
-
     }
 
     const NavLeftStyleM={
@@ -126,6 +121,7 @@ export default class Media extends React.PureComponent {
       width:"64px",
       height:"64px",
       left:"-1em"
+
     }
 
     const NavRightStyleM={
@@ -135,6 +131,7 @@ export default class Media extends React.PureComponent {
       width:"64px",
       height:"64px",
       right:"-1em",
+
     }
 
     const MoreOverStyleM={
@@ -153,33 +150,7 @@ export default class Media extends React.PureComponent {
       backgroundRepeat:"repeat-y",
       backgroundPosition:"center center",
 
-
-
-
     }
-
-    const vidScreen={
-      width:"855px",
-      height:"100%",
-      boxSizing:"border-box",
-      position:"absolute",
-      display:"grid",
-      paddingTop:"5px",
-      paddingLeft:"30px",
-      paddingRight:"30px",
-      left:"0",
-      textAlign:"center",
-
-    }
-
-    const vidScreenM={
-      position:"relative",
-      width:"100%",
-      height:"315",
-
-
-    }
-
 
     const soundcloudFrame={
       boxSizing:"border-box",
@@ -204,7 +175,6 @@ export default class Media extends React.PureComponent {
       display:"block",
       zIndex:"99999",
 
-
     }
 
     const playerImageM={
@@ -215,10 +185,23 @@ export default class Media extends React.PureComponent {
       height:"266",
       marginBottom:"5px"
 
+    }
+
+    const vidScreen={
+      position:"relative",
+      margin:"15px",
+      paddingLeft:"10",
+      paddingRight:"10",
+      textAlign:"center"
 
     }
 
+    const vidScreenM={
+      position:"relative",
+      width:"100%",
+      height:"315",
 
+    }
 
     return (
       <div style={backgroundwrapper}>
@@ -283,9 +266,22 @@ export default class Media extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div style={soundcloudFrameM}>
-              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+              <iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             </div>
           </Responsive>
+
+          <Responsive minDeviceWidth={1024}>
+            <div style={vidScreen}>
+              <iframe width="854" height="480" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
+            </div>
+          </Responsive>
+          <Responsive maxDeviceWidth={1023}>
+            <div style={vidScreenM}>
+              <iframe width="auto" height="auto" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
+            </div>
+          </Responsive>
+
+
 
           <Responsive minDeviceWidth={1024}>
             <div>
@@ -295,11 +291,6 @@ export default class Media extends React.PureComponent {
           <Responsive maxDeviceWidth={1023}>
 
           </Responsive>
-
-
-
-
-
 
 
           </main>

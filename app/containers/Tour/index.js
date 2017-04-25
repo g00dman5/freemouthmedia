@@ -160,6 +160,8 @@ export default class Ttour extends React.PureComponent {
       display:"block",
       paddingLeft:"5px",
       paddingRight:"5px",
+      paddingBottom:"5px",
+      justifyContent:"center"
 
     }
 
@@ -168,7 +170,8 @@ export default class Ttour extends React.PureComponent {
       margin:"5px",
       width:"162",
       height:"250",
-      float:"left"
+      float:"left",
+      overflow:"hidden"
 
     }
 
@@ -181,13 +184,39 @@ export default class Ttour extends React.PureComponent {
 
     }
 
+    const bannerImage={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=24aa96ecc9f9c6c30eacbae56c5eaa8d&oe=598C9243)",
+      minHeight:"100vh",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      display:"block",
+      zIndex:"99999",
+      margin:"2px",
+    }
 
-    const tourWidget={
-      boxSizing:"border-box",
-      position:"relative",
+    const bannerImageM={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/33832_477646802861_6538762_n.jpg?oh=5cbe8547a4da8752ec6df16f9aefef35&oe=59974EDE)",
+      height:"auto",
+      width:""
+    }
+
+    const tableDiv={
+      boxSizing:"content-box",
+      padding:"5",
+      margin:"5",
+
 
     }
 
+    const tableStyle={
+      textAlign:"center",
+      clear:"both",
+      width:"100%",
+      fontFamily:"'Rubik', sans-serif"
+
+
+
+    }
 
     return (
       <div style={backgroundwrapper}>
@@ -236,12 +265,10 @@ export default class Ttour extends React.PureComponent {
           </Responsive>
         </main>
 
-
         <Responsive minDeviceWidth={1024}>
 
-          <div style={tourWidget}>
-            <script charSet="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a className="bit-widget-initializer" data-artist-name="Young Goodman Brown" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#FFFFFF" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="5" data-link-text-color="#2F95DE"></a>
-          </div>
+          <div style={bannerImage}></div>
+
 
           <div style={posterGallery}>
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
@@ -265,10 +292,11 @@ export default class Ttour extends React.PureComponent {
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/s960x960/913909_10151430783672862_1307538094_o.jpg?oh=06a058f5fe46a8577be8fe87a2464fda&oe=5996C88D"/>
           </div>
 
-
-
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
+
+
+          <div style={bannerImageM}></div>
 
           <div style={posterGallery}>
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
@@ -280,6 +308,83 @@ export default class Ttour extends React.PureComponent {
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
           </div>
         </Responsive>
+
+
+        <div tableDiv>
+          <table style={tableStyle}>
+            <tbody>
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+
+              <tr>
+                <td>Dec 31</td>
+                <td>Atlanta</td>
+                <td>Variety Playhouse</td>
+                <Link to="/"><td>Tickets</td></Link>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
 
 

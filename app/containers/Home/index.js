@@ -345,7 +345,7 @@ export default class Home extends React.PureComponent {
         </div>
 
         <div style={vidScreen}>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="1" allowFullScreen></iframe>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="1" allowFullScreen></iframe>
         </div>
 
         <div style={pStyle}>
@@ -380,7 +380,7 @@ export default class Home extends React.PureComponent {
         <p>AKs somewhere far far away. Betweeen Ohio and Trout LAKE, NY. Maybe bombs in Statesboro, GA. Or back of your home, New Mexico. Blow your fuckin brains out before the cigarettes do because peace is dying fast.</p>
         </div>
 
-      
+
 
 
 

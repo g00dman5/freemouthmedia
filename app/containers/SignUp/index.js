@@ -42,7 +42,7 @@ export default class SignUp extends React.PureComponent {
     data.append("name", this.state.name);
     data.append("password", this.state.password);
 
-    fetch("",{
+    fetch("http://localhost:8000/api/signUp",{
       method:"post",
       body:data
     })
@@ -87,7 +87,7 @@ export default class SignUp extends React.PureComponent {
             <div style={inputStyle}>
               <input onChange={this.handleName} type="text" placeholder="Username"/>
               <input onChange={this.handleEmail} type="text" placeholder="Email"/>
-              <input onChange={this.handlePassword} type="text" placeholder="Password"/>
+              <input onChange={this.handlePassword} type="password" placeholder="Password"/>
               <input onTouchTap={this.signUp} type="submit" placeholder="Submit"/>
             </div>
 
