@@ -290,7 +290,9 @@ export default class Ttour extends React.PureComponent {
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1915563_113201422861_4692371_n.jpg?oh=180ccd779e9aebe22864906feddd4286&oe=5999B755"/>
 
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/s960x960/913909_10151430783672862_1307538094_o.jpg?oh=06a058f5fe46a8577be8fe87a2464fda&oe=5996C88D"/>
-          </div>
+
+            <img style={poster} src="http://www.suburbanapologist.com/get-learned-wmnfs-30th-tropical-heatwave-let-us-help-you-plan-your-day/"/>
+            </div>
 
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
@@ -306,7 +308,11 @@ export default class Ttour extends React.PureComponent {
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
 
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
+
+
           </div>
+
+
         </Responsive>
 
 
