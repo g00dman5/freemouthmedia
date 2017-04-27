@@ -170,10 +170,19 @@ export default class Media extends React.PureComponent {
     const bannerImage={
       backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
       minHeight:"100vh",
+      width:"100%",
       backgroundSize:"cover",
       backgroundAttachment:"scroll",
       display:"block",
       zIndex:"99999",
+
+    }
+
+    const bannerImageM={
+      backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/168054_485575287861_6208488_n.jpg?oh=3fbe2bef9c4914bc9baa56bdd1a7c1d0&oe=59742DE9)",
+      position:"absolute",
+      height:"auto",
+      width:"100%",
 
     }
 
@@ -205,6 +214,7 @@ export default class Media extends React.PureComponent {
 
     return (
       <div style={backgroundwrapper}>
+
         <Helmet title="Media" meta={[ { name: 'description', content: 'Description of Media' }]}/>
 
 
@@ -226,13 +236,11 @@ export default class Media extends React.PureComponent {
               <Link style={linkStyleM} to= '/shop'>Shop </Link>
             </div>
           </Responsive>
+          <Responsive minDeviceWidth={1024}>
+          </Responsive>
+          <Responsive maxDeviceWidth={1023}>
+          </Responsive>
 
-          <header>
-            <Responsive minDeviceWidth={1024}>
-            </Responsive>
-            <Responsive maxDeviceWidth={1023}>
-            </Responsive>
-          </header>
 
           <main>
            <Responsive minDeviceWidth={1024}>
@@ -241,25 +249,24 @@ export default class Media extends React.PureComponent {
               <Link to="/"><NavRight style={NavRightStyle}/></Link>
               <NavUp style={NavUpStyle}/>
               <NavDown style={NavDownStyle}/>
-              <MoreOver style={MoreOverStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
              <Link to="/shop"><NavLeft style={NavLeftStyleM}/></Link>
              <Link to="/"><NavRight style={NavRightStyleM}/></Link>
-             <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
 
-
-          <div style={bannerImage}></div>
-
+          <Responsive minDeviceWidth={1024}>
+            <div style={bannerImage}></div>
+          </Responsive>
           <Responsive maxDeviceWidth={1023}>
-
+            <div></div>
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>
+
             <div style={soundcloudFrame}>
               <iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/316950173&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             </div>
@@ -283,14 +290,6 @@ export default class Media extends React.PureComponent {
 
 
 
-          <Responsive minDeviceWidth={1024}>
-            <div>
-
-            </div>
-          </Responsive>
-          <Responsive maxDeviceWidth={1023}>
-
-          </Responsive>
 
 
           </main>

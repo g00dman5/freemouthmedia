@@ -195,9 +195,9 @@ export default class Ttour extends React.PureComponent {
     }
 
     const bannerImageM={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/33832_477646802861_6538762_n.jpg?oh=5cbe8547a4da8752ec6df16f9aefef35&oe=59974EDE)",
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=24aa96ecc9f9c6c30eacbae56c5eaa8d&oe=598C9243)",
       height:"auto",
-      width:""
+      left:"30px",
     }
 
     const tableDiv={
@@ -253,14 +253,12 @@ export default class Ttour extends React.PureComponent {
               <Link to="/shop"><NavRight style={NavRightStyle}/></Link>
               <NavUp style={NavUpStyle}/>
               <NavDown style={NavDownStyle}/>
-              <MoreOver style={MoreOverStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
              <Link to="/"><NavLeft style={NavLeftStyleM}/></Link>
              <Link to="/shop"><NavRight style={NavRightStyleM}/></Link>
-             <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
         </main>

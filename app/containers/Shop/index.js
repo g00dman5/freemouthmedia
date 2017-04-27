@@ -153,7 +153,22 @@ export default class Ttour extends React.PureComponent {
       backgroundPosition:"center center",
 
 
+    }
 
+    const bannerImage={
+      backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/425176_10150581004417862_994448017_n.jpg?oh=7c454d2f298e22c78fc2799e24c8496b&oe=59969CD2)",
+      minHeight:"100vh",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      display:"block",
+      zIndex:"99999",
+      margin:"2px",
+    }
+
+    const bannerImageM={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/33832_477646802861_6538762_n.jpg?oh=5cbe8547a4da8752ec6df16f9aefef35&oe=59974EDE)",
+      height:"auto",
+      width:""
     }
 
 
@@ -187,34 +202,40 @@ export default class Ttour extends React.PureComponent {
             </div>
           </Responsive>
 
-          <header>
-            <Responsive minDeviceWidth={1024}>
-            </Responsive>
-            <Responsive maxDeviceWidth={1023}>
-            </Responsive>
-          </header>
 
-          <main>
+          <header>
            <Responsive minDeviceWidth={1024}>
             <div>
-              <Link to="tour"><NavLeft style={NavLeftStyle}/></Link>
+              <Link to="/tour"><NavLeft style={NavLeftStyle}/></Link>
               <Link to="/media"><NavRight style={NavRightStyle}/></Link>
               <NavUp style={NavUpStyle}/>
               <NavDown style={NavDownStyle}/>
-              <MoreOver style={MoreOverStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
              <Link to="/"><NavLeft style={NavLeftStyleM}/></Link>
              <Link to="/media"><NavRight style={NavRightStyleM}/></Link>
-             <MoreOver style={MoreOverStyleM}/>
             </div>
           </Responsive>
+        </header>
+
+        <main>
+         <Responsive minDeviceWidth={1024}>
+
+           <div style={bannerImage}></div>
+
+         </Responsive>
+         <Responsive maxDeviceWidth={1023}>
+
+           <div style={bannerImageM}></div>
+
+         </Responsive>
+
         </main>
 
 
-
+        <div style={bannerImageM}></div>
 
 
 

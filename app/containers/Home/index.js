@@ -149,10 +149,7 @@ export default class Home extends React.PureComponent {
       boxSizing:"content-box",
       marginTop:"0.7em",
 
-
-
     }
-
 
     const bannerImage={
       backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p693323167-5.jpg",
@@ -163,9 +160,7 @@ export default class Home extends React.PureComponent {
       display:"block",
       zIndex:"99999",
 
-
     }
-
 
     const pStyle={
       color:"#330000",
@@ -177,9 +172,6 @@ export default class Home extends React.PureComponent {
       paddingRight:"15px",
       paddingTop:"0px",
       overflow:"hidden"
-
-
-
 
     }
 
@@ -247,7 +239,7 @@ export default class Home extends React.PureComponent {
       marginRight:"15px",
     }
 
-    const birdLetter={
+    const birdLetter=
       boxSizing:"content-box",
       position:"relative",
       fontStyle:"italic",
@@ -291,18 +283,14 @@ export default class Home extends React.PureComponent {
             <Link to="/tour"><NavRight style={NavRightStyle}/></Link>
             <NavUp style={NavUpStyle}/>
             <NavDown style={NavDownStyle}/>
-            <MoreOver style={MoreOverStyle}/>
           </div>
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
           <div>
            <Link to="/media"><NavLeft style={NavLeftStyleM}/></Link>
            <Link to="/tour"><NavRight style={NavRightStyleM}/></Link>
-           <MoreOver style={MoreOverStyleM}/>
           </div>
         </Responsive>
-
-        <div style={bannerImage}></div>
 
 
         <div style={creditsBox}>
