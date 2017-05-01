@@ -22,6 +22,7 @@ export default class Media extends React.PureComponent {
     const navStyle={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -32,15 +33,14 @@ export default class Media extends React.PureComponent {
     }
 
     const mobileNav={
-
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
       display: "flex",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       flexDirection: "row",
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      backgroundColor:"rgb(153, 0, 0, .5)",
       zIndex:"99999",
 
 
@@ -180,9 +180,11 @@ export default class Media extends React.PureComponent {
 
     const bannerImageM={
       backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/168054_485575287861_6208488_n.jpg?oh=3fbe2bef9c4914bc9baa56bdd1a7c1d0&oe=59742DE9)",
-      position:"absolute",
-      height:"auto",
-      width:"100%",
+      minHeight:"100vh",
+      maxDeviceWidth:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      margin:"2px",
 
     }
 
@@ -229,7 +231,7 @@ export default class Media extends React.PureComponent {
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
-            <div>
+            <div style={mobileNav}>
               <Link style={linkStyleM} to= '/media'>Media </Link>
               <Link style={linkStyleM} to= '/'> Home </Link>
               <Link style={linkStyleM} to= '/tour'>Tour </Link>
@@ -262,7 +264,7 @@ export default class Media extends React.PureComponent {
             <div style={bannerImage}></div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
-            <div></div>
+            <div style={bannerImageM}></div>
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>

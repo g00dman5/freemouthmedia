@@ -21,6 +21,7 @@ export default class Ttour extends React.PureComponent {
     const navStyle={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -33,12 +34,12 @@ export default class Ttour extends React.PureComponent {
     const mobileNav={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      background:"rgb(0, 0, 0, .0",
       zIndex:"99999",
 
     }
@@ -58,8 +59,6 @@ export default class Ttour extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
 
     }
-
-
 
     const NavLeftStyle={
       color:"#c0c0c0",
@@ -110,11 +109,6 @@ export default class Ttour extends React.PureComponent {
       top:"25",
       left:"0",
       margin:"auto",
-
-
-
-
-
 
     }
 
@@ -187,6 +181,7 @@ export default class Ttour extends React.PureComponent {
     const bannerImage={
       backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=24aa96ecc9f9c6c30eacbae56c5eaa8d&oe=598C9243)",
       minHeight:"100vh",
+      maxDeviceWidth:"100%",
       backgroundSize:"cover",
       backgroundAttachment:"scroll",
       display:"block",
@@ -195,9 +190,13 @@ export default class Ttour extends React.PureComponent {
     }
 
     const bannerImageM={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1002638_10151805886217862_1791576482_n.jpg?oh=24aa96ecc9f9c6c30eacbae56c5eaa8d&oe=598C9243)",
-      height:"auto",
-      left:"30px",
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/182264_491894117861_1912763_n.jpg?oh=2620955cf0890455c8a868039429581d&oe=5981FDBF)",
+      minHeight:"100vh",
+      maxDeviceWidth:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      display:"block",
+      margin:"auto"
     }
 
     const tableDiv={
@@ -263,10 +262,12 @@ export default class Ttour extends React.PureComponent {
           </Responsive>
         </main>
 
+
+
+
         <Responsive minDeviceWidth={1024}>
 
           <div style={bannerImage}></div>
-
 
           <div style={posterGallery}>
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
@@ -294,7 +295,6 @@ export default class Ttour extends React.PureComponent {
 
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
-
 
           <div style={bannerImageM}></div>
 

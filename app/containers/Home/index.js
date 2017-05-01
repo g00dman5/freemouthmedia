@@ -21,6 +21,7 @@ export default class Home extends React.PureComponent {
     const navStyle={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -33,13 +34,14 @@ export default class Home extends React.PureComponent {
     const mobileNav={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      background:"rgb(0, 0, 0, .0",
       zIndex:"99999",
+      
 
     }
 
@@ -152,14 +154,23 @@ export default class Home extends React.PureComponent {
     }
 
     const bannerImage={
-      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p693323167-5.jpg",
+      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p693323167-5.jpg)",
       minHeight:"100vh",
+      maxDeviceWidth:"100",
       backgroundSize:"cover",
       backgroundPosition:"center center",
       backgroundAttachment:"scroll",
       display:"block",
       zIndex:"99999",
 
+    }
+
+    const bannerImageM={
+      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/179236_485591737861_5817338_n.jpg?oh=045ad20b435cb4c05a517f8dc9133116&oe=59C06354)",
+      minHeight:"100vh",
+      maxDeviceWidth:"100%",
+      backgroundAttachment:"scroll",
+      margin:"2px",
     }
 
     const pStyle={
@@ -239,7 +250,7 @@ export default class Home extends React.PureComponent {
       marginRight:"15px",
     }
 
-    const birdLetter=
+    const birdLetter={
       boxSizing:"content-box",
       position:"relative",
       fontStyle:"italic",
@@ -292,6 +303,12 @@ export default class Home extends React.PureComponent {
           </div>
         </Responsive>
 
+        <Responsive minDeviceWidth={1024}>
+          <div style={bannerImage}></div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div style={bannerImageM}></div>
+        </Responsive>
 
         <div style={creditsBox}>
           <div>

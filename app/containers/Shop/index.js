@@ -21,6 +21,7 @@ export default class Ttour extends React.PureComponent {
     const navStyle={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -33,12 +34,12 @@ export default class Ttour extends React.PureComponent {
     const mobileNav={
       border: "1px solid #bbbbbb",
       borderRadius:"5px",
+      backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
       position:"fixed",
       width:"100%",
-      background:"rgb(0, 0, 0, .0",
       zIndex:"99999",
 
     }
@@ -166,9 +167,12 @@ export default class Ttour extends React.PureComponent {
     }
 
     const bannerImageM={
-      backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/33832_477646802861_6538762_n.jpg?oh=5cbe8547a4da8752ec6df16f9aefef35&oe=59974EDE)",
-      height:"auto",
-      width:""
+      backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/425176_10150581004417862_994448017_n.jpg?oh=7c454d2f298e22c78fc2799e24c8496b&oe=59969CD2)",
+      minHeight:"100vh",
+      maxDeviceWidth:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      margin:"2px",
     }
 
 
@@ -214,7 +218,7 @@ export default class Ttour extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div>
-             <Link to="/"><NavLeft style={NavLeftStyleM}/></Link>
+             <Link to="/tour"><NavLeft style={NavLeftStyleM}/></Link>
              <Link to="/media"><NavRight style={NavRightStyleM}/></Link>
             </div>
           </Responsive>
@@ -235,7 +239,7 @@ export default class Ttour extends React.PureComponent {
         </main>
 
 
-        <div style={bannerImageM}></div>
+
 
 
 
