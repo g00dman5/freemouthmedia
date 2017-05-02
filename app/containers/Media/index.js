@@ -51,6 +51,7 @@ export default class Media extends React.PureComponent {
       color:"#ffffff",
       fontSize:"1.6em",
       fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
 
     }
 
@@ -59,6 +60,9 @@ export default class Media extends React.PureComponent {
       color:"#ffffff",
       fontSize:"45px",
       fontFamily:"'Squada One', cursive",
+      fontWeight:"bold",
+      textTransform:"uppercase",
+
 
     }
 
@@ -152,6 +156,42 @@ export default class Media extends React.PureComponent {
 
     }
 
+    const bannerText={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"130px",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"30%",
+      left:"50%"
+
+    }
+
+    const bannerImage={
+      position:"relative",
+      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
+      minHeight:"100vh",
+      width:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      display:"block",
+      zIndex:"99998",
+
+    }
+
+    const bannerImageM={
+      backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/168054_485575287861_6208488_n.jpg?oh=3fbe2bef9c4914bc9baa56bdd1a7c1d0&oe=59742DE9)",
+      minHeight:"100vh",
+      maxDeviceWidth:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      margin:"2px",
+
+    }
+
+
     const soundcloudFrame={
       boxSizing:"border-box",
       position:"relative",
@@ -166,28 +206,6 @@ export default class Media extends React.PureComponent {
       margin:"20px",
 
     }
-
-    const bannerImage={
-      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
-      minHeight:"100vh",
-      width:"100%",
-      backgroundSize:"cover",
-      backgroundAttachment:"scroll",
-      display:"block",
-      zIndex:"99999",
-
-    }
-
-    const bannerImageM={
-      backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/168054_485575287861_6208488_n.jpg?oh=3fbe2bef9c4914bc9baa56bdd1a7c1d0&oe=59742DE9)",
-      minHeight:"100vh",
-      maxDeviceWidth:"100%",
-      backgroundSize:"cover",
-      backgroundAttachment:"scroll",
-      margin:"2px",
-
-    }
-
     const playerImageM={
       left:"25",
       position:"relative",
@@ -262,10 +280,14 @@ export default class Media extends React.PureComponent {
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>
-            <div style={bannerImage}></div>
+            <div style={bannerImage}>
+              <h1 style={bannerText}>Media</h1>
+            </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
-            <div style={bannerImageM}></div>
+            <div style={bannerImageM}>
+              <h1 style={bannerText}>Media</h1>
+            </div>
           </Responsive>
 
           <Responsive minDeviceWidth={1024}>

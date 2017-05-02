@@ -49,6 +49,8 @@ export default class Ttour extends React.PureComponent {
       color:"#ffffff",
       fontSize:"1.6em",
       fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
+
 
     }
 
@@ -57,6 +59,8 @@ export default class Ttour extends React.PureComponent {
       color:"#ffffff",
       fontSize:"45px",
       fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
+
 
     }
 

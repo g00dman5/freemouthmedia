@@ -41,7 +41,7 @@ export default class Home extends React.PureComponent {
       position:"fixed",
       width:"100%",
       zIndex:"99999",
-      
+
 
     }
 
@@ -50,6 +50,7 @@ export default class Home extends React.PureComponent {
       color:"#ffffff",
       fontSize:"1.6em",
       fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
 
     }
 
@@ -58,6 +59,8 @@ export default class Home extends React.PureComponent {
       color:"#ffffff",
       fontSize:"45px",
       fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
+
 
     }
 
