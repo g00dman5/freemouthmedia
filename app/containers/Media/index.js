@@ -210,7 +210,8 @@ export default class Media extends React.PureComponent {
     const vidScreenM={
       position:"relative",
       width:"100%",
-      height:"315",
+      height:"368",
+      padding:"25px",
 
     }
 
@@ -286,7 +287,7 @@ export default class Media extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div style={vidScreenM}>
-              <iframe width="auto" height="auto" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
+              <iframe width="100%" height="100%" position="absolute" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
             </div>
           </Responsive>
 
