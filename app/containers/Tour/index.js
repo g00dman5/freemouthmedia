@@ -20,7 +20,6 @@ export default class Ttour extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -33,7 +32,6 @@ export default class Ttour extends React.PureComponent {
 
     const mobileNav={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -79,14 +77,6 @@ export default class Ttour extends React.PureComponent {
       height:"64px",
       right:"0px"
 
-    }
-
-    const NavUpStyle={
-      color:"#ffffff",
-    }
-
-    const NavDownStyle={
-      color:"#ffffff",
     }
 
     const MoreOverStyle={
@@ -154,10 +144,20 @@ export default class Ttour extends React.PureComponent {
       boxSizing:"content-box",
       overflow:"hidden",
       display:"block",
-      paddingLeft:"5px",
+      paddingLeft:"70px",
       paddingRight:"5px",
       paddingBottom:"5px",
       justifyContent:"center"
+
+    }
+
+    const posterGalleryM={
+      boxSizing:"content-box",
+      overflow:"hidden",
+      display:"block",
+      paddingLeft:"5px",
+      paddingRight:"5px",
+      paddingBottom:"5px",
 
     }
 
@@ -191,6 +191,19 @@ export default class Ttour extends React.PureComponent {
       margin:"2px",
     }
 
+    const bannerText={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"130px",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"40%",
+      left:"42%"
+
+    }
+
     const bannerImageM={
       backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/182264_491894117861_1912763_n.jpg?oh=2620955cf0890455c8a868039429581d&oe=5981FDBF)",
       minHeight:"100vh",
@@ -201,10 +214,24 @@ export default class Ttour extends React.PureComponent {
       margin:"auto"
     }
 
+    const bannerTextM={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"5em",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"60%",
+      left:"34%"
+
+    }
+
     const tableDiv={
       boxSizing:"content-box",
-      padding:"5",
-      margin:"5",
+      padding:"5px",
+      margin:"5px",
+      position:"relative"
 
 
     }
@@ -212,10 +239,20 @@ export default class Ttour extends React.PureComponent {
     const tableStyle={
       textAlign:"center",
       clear:"both",
+      width:"68%",
+      fontFamily:"'Rubik', sans-serif",
+      borderSpacing:"10px 10px",
+      position:"relative",
+      left:"15%"
+
+    }
+
+    const tableStyleM={
+      textAlign:"center",
+      clear:"both",
       width:"100%",
-      fontFamily:"'Rubik', sans-serif"
-
-
+      fontFamily:"'Rubik', sans-serif",
+      borderSpacing:"10px 10px",
 
     }
 
@@ -252,8 +289,6 @@ export default class Ttour extends React.PureComponent {
             <div>
               <Link to="/"><NavLeft style={NavLeftStyle}/></Link>
               <Link to="/shop"><NavRight style={NavRightStyle}/></Link>
-              <NavUp style={NavUpStyle}/>
-              <NavDown style={NavDownStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
@@ -264,12 +299,176 @@ export default class Ttour extends React.PureComponent {
           </Responsive>
         </main>
 
+        <Responsive minDeviceWidth={1024}>
+          <div style={bannerImage}>
+            <h1 style={bannerText}>Tour</h1>
+          </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div style={bannerImageM}>
+            <h1 style={bannerTextM}>Tour</h1>
+          </div>
+        </Responsive>
+
 
 
 
         <Responsive minDeviceWidth={1024}>
+          <div tableDiv>
+            <table style={tableStyle}>
+              <tbody>
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 31</td>
+                  <td>Atlanta GA</td>
+                  <td>Variety Playhouse</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
 
-          <div style={bannerImage}></div>
+                <tr>
+                  <td>Dec 30</td>
+                  <td>Athens GA</td>
+                  <td>40 Watt</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 29</td>
+                  <td>Carrboro NC</td>
+                  <td>Cat's Cradle</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 22</td>
+                  <td>Knoxville TN</td>
+                  <td>WDVX Studios</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 21</td>
+                  <td>Raleigh NC</td>
+                  <td>Pour House Music Hall</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 20</td>
+                  <td>Charlotte NC</td>
+                  <td>The Rabbit Hole</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 19</td>
+                  <td>Charleston SC</td>
+                  <td>Charleston Pour House</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 15</td>
+                  <td>Orlando FL</td>
+                  <td>Back Booth</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 14</td>
+                  <td>Tampa FL</td>
+                  <td>Ybor Night Lights</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 12</td>
+                  <td>Gainesville FL</td>
+                  <td>The Jam</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div tableDiv>
+            <table style={tableStyleM}>
+              <tbody>
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 31</td>
+                  <td>Atlanta GA</td>
+                  <td>Variety Playhouse</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 30</td>
+                  <td>Athens GA</td>
+                  <td>40 Watt</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 29</td>
+                  <td>Carrboro NC</td>
+                  <td>Cat's Cradle</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 22</td>
+                  <td>Knoxville TN</td>
+                  <td>WDVX Studios</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 21</td>
+                  <td>Raleigh NC</td>
+                  <td>Pour House Music Hall</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 20</td>
+                  <td>Charlotte NC</td>
+                  <td>The Rabbit Hole</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 19</td>
+                  <td>Charleston SC</td>
+                  <td>Charleston Pour House</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 15</td>
+                  <td>Orlando FL</td>
+                  <td>Back Booth</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr style={{background:"#cccccc"}}>
+                  <td>Dec 14</td>
+                  <td>Tampa FL</td>
+                  <td>Ybor Night Lights</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+
+                <tr>
+                  <td>Dec 12</td>
+                  <td>Gainesville FL</td>
+                  <td>The Jam</td>
+                  <Link to="/"><td>Tickets</td></Link>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Responsive>
+
+        <Responsive minDeviceWidth={1024}>
 
           <div style={posterGallery}>
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
@@ -291,16 +490,12 @@ export default class Ttour extends React.PureComponent {
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1915563_113201422861_4692371_n.jpg?oh=180ccd779e9aebe22864906feddd4286&oe=5999B755"/>
 
             <img style={poster} src="https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/s960x960/913909_10151430783672862_1307538094_o.jpg?oh=06a058f5fe46a8577be8fe87a2464fda&oe=5996C88D"/>
-
-            <img style={poster} src="http://www.suburbanapologist.com/get-learned-wmnfs-30th-tropical-heatwave-let-us-help-you-plan-your-day/"/>
-            </div>
+          </div>
 
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
 
-          <div style={bannerImageM}></div>
-
-          <div style={posterGallery}>
+          <div style={posterGalleryM}>
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1006032_10151586320762862_702843352_n.jpg?oh=c6a7f8402d14d39fed93e4a40f259dfe&oe=598EADC5"/>
 
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/995720_10151540628512862_1243357349_n.jpg?oh=2cee9c03b2c463f06841a5a404af27c3&oe=597B60A6"/>
@@ -308,90 +503,8 @@ export default class Ttour extends React.PureComponent {
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/163753_480314142861_538236_n.jpg?oh=32b9627b752f8783e42eebe8a6f19b59&oe=5980F862"/>
 
             <img style={posterM} src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/22042_279763947861_138539_n.jpg?oh=479ee668d885e42492d87774151f7561&oe=5990947C"/>
-
-
           </div>
-
-
         </Responsive>
-
-
-        <div tableDiv>
-          <table style={tableStyle}>
-            <tbody>
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-
-              <tr>
-                <td>Dec 31</td>
-                <td>Atlanta</td>
-                <td>Variety Playhouse</td>
-                <Link to="/"><td>Tickets</td></Link>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
 
 
       </div>

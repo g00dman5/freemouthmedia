@@ -20,7 +20,6 @@ export default class Home extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -33,7 +32,6 @@ export default class Home extends React.PureComponent {
 
     const mobileNav={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -41,7 +39,6 @@ export default class Home extends React.PureComponent {
       position:"fixed",
       width:"100%",
       zIndex:"99999",
-
 
     }
 
@@ -61,10 +58,7 @@ export default class Home extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
       textTransform:"uppercase",
 
-
     }
-
-
 
     const NavLeftStyle={
       color:"#c0c0c0",
@@ -85,21 +79,12 @@ export default class Home extends React.PureComponent {
 
     }
 
-    const NavUpStyle={
-      color:"#ffffff",
-    }
-
-    const NavDownStyle={
-      color:"#ffffff",
-    }
-
     const MoreOverStyle={
       color:"#c0c0c0",
       position:"absolute",
       bottom:"30px",
       width:"100%",
       height:"70px"
-
 
     }
 
@@ -115,11 +100,6 @@ export default class Home extends React.PureComponent {
       top:"25",
       left:"0",
       margin:"auto",
-
-
-
-
-
 
     }
 
@@ -159,7 +139,6 @@ export default class Home extends React.PureComponent {
     const bannerImage={
       backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p693323167-5.jpg)",
       minHeight:"100vh",
-      maxDeviceWidth:"100",
       backgroundSize:"cover",
       backgroundPosition:"center center",
       backgroundAttachment:"scroll",
@@ -171,7 +150,7 @@ export default class Home extends React.PureComponent {
     const bannerImageM={
       backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/179236_485591737861_5817338_n.jpg?oh=045ad20b435cb4c05a517f8dc9133116&oe=59C06354)",
       minHeight:"100vh",
-      maxDeviceWidth:"100%",
+      backgroundSize:"cover",
       backgroundAttachment:"scroll",
       margin:"2px",
     }
@@ -185,7 +164,8 @@ export default class Home extends React.PureComponent {
       paddingLeft:"15px",
       paddingRight:"15px",
       paddingTop:"0px",
-      overflow:"hidden"
+      overflow:"hidden",
+      borderTopWidth:"2px"
 
     }
 
@@ -204,15 +184,20 @@ export default class Home extends React.PureComponent {
 
     }
 
+    const vidScreenM={
+      position:"relative",
+      width:"100%",
+      height:"368",
+      padding:"25px",
+
+    }
+
     const posterGallery={
       boxSizing:"content-box",
       overflow:"hidden",
       display:"block",
       paddingLeft:"15px",
       paddingRight:"15px",
-
-
-
 
     }
 
@@ -225,19 +210,18 @@ export default class Home extends React.PureComponent {
 
     }
 
-
     const backgroundwrapper={
       backgroundImage:"url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17951615_10203128057598149_4304219126977797958_n.jpg?oh=952eddc11f8cf95272fa41d89a1af6eb&oe=5988D0DF)",
       minHeight:"100vh",
       backgroundRepeat:"repeat-y",
       backgroundPosition:"center center"
 
-
     }
 
     const creditsBox={
       boxSizing:"borderbox",
-      padding:"4%",
+      padding:"1%",
+
 
     }
 
@@ -250,7 +234,9 @@ export default class Home extends React.PureComponent {
       boxSizing:"content-box",
       position:"relative",
       textAlign:"right",
-      marginRight:"15px",
+      marginRight:"5px",
+
+
     }
 
     const birdLetter={
@@ -259,7 +245,6 @@ export default class Home extends React.PureComponent {
       fontStyle:"italic",
 
     }
-
 
     return (
 
@@ -283,20 +268,13 @@ export default class Home extends React.PureComponent {
           </div>
         </Responsive>
 
-        <header>
-          <Responsive minDeviceWidth={1024}>
-          </Responsive>
-          <Responsive maxDeviceWidth={1023}>
-          </Responsive>
-        </header>
+
 
         <main>
          <Responsive minDeviceWidth={1024}>
           <div>
             <Link to="/media"><NavLeft style={NavLeftStyle}/></Link>
             <Link to="/tour"><NavRight style={NavRightStyle}/></Link>
-            <NavUp style={NavUpStyle}/>
-            <NavDown style={NavDownStyle}/>
           </div>
         </Responsive>
         <Responsive maxDeviceWidth={1023}>
@@ -314,14 +292,9 @@ export default class Home extends React.PureComponent {
         </Responsive>
 
         <div style={creditsBox}>
-          <div>
-            //place icon
-          </div>
-
           <div style={caption}>
-          <p>Athens Bird</p>
-          <p>11/11/11</p>
-          <p>Augusta, Georgia</p>
+            <p>11/11/11</p>
+            <p>Augusta, GA</p>
           </div>
         </div>
 
@@ -352,9 +325,16 @@ export default class Home extends React.PureComponent {
         <p>Rest assured, dear readers, when I find that next edition Ill pass it along to you. </p>
         </div>
 
-        <div style={vidScreen}>
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="1" allowFullScreen></iframe>
-        </div>
+        <Responsive minDeviceWidth={1024}>
+          <div style={vidScreen}>
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
+          </div>
+        </Responsive>
+        <Responsive maxDeviceWidth={1023}>
+          <div style={vidScreenM}>
+            <iframe width="100%" height="100%" position="absolute" src="https://www.youtube.com/embed/VhN0jenrZqM?rel=0&amp;showinfo=0" frameBorder="0" allowFullScreen></iframe>
+          </div>
+        </Responsive>
 
         <div style={pStyle}>
         <p><span style={span}>Cigarrette bomb, code red</span></p>
@@ -390,16 +370,9 @@ export default class Home extends React.PureComponent {
 
 
 
-
-
     <div>
 
   </div>
-
-
-
-
-
 
 
 

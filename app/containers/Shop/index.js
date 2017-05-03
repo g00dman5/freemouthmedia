@@ -20,7 +20,6 @@ export default class Ttour extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -33,7 +32,6 @@ export default class Ttour extends React.PureComponent {
 
     const mobileNav={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -51,7 +49,6 @@ export default class Ttour extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
       textTransform:"uppercase",
 
-
     }
 
     const linkStyle={
@@ -61,10 +58,7 @@ export default class Ttour extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
       textTransform:"uppercase",
 
-
     }
-
-
 
     const NavLeftStyle={
       color:"#c0c0c0",
@@ -85,21 +79,12 @@ export default class Ttour extends React.PureComponent {
 
     }
 
-    const NavUpStyle={
-      color:"#ffffff",
-    }
-
-    const NavDownStyle={
-      color:"#ffffff",
-    }
-
     const MoreOverStyle={
       color:"#c0c0c0",
       position:"absolute",
       bottom:"30px",
       width:"100%",
       height:"70px"
-
 
     }
 
@@ -115,11 +100,6 @@ export default class Ttour extends React.PureComponent {
       top:"25",
       left:"0",
       margin:"auto",
-
-
-
-
-
 
     }
 
@@ -157,7 +137,6 @@ export default class Ttour extends React.PureComponent {
       backgroundRepeat:"repeat-y",
       backgroundPosition:"center center",
 
-
     }
 
     const bannerImage={
@@ -170,6 +149,19 @@ export default class Ttour extends React.PureComponent {
       margin:"2px",
     }
 
+    const bannerText={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"130px",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"40%",
+      left:"38%"
+
+    }
+
     const bannerImageM={
       backgroundImage:"url(https://scontent.fhsv1-1.fna.fbcdn.net/v/t1.0-9/425176_10150581004417862_994448017_n.jpg?oh=7c454d2f298e22c78fc2799e24c8496b&oe=59969CD2)",
       minHeight:"100vh",
@@ -179,15 +171,24 @@ export default class Ttour extends React.PureComponent {
       margin:"2px",
     }
 
+    const bannerTextM={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"5em",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"60%",
+      left:"30%"
+
+    }
 
     const tourWidget={
       boxSizing:"border-box",
       position:"relative",
 
     }
-
-
-
 
     return (
       <div style={backgroundwrapper}>
@@ -216,8 +217,6 @@ export default class Ttour extends React.PureComponent {
             <div>
               <Link to="/tour"><NavLeft style={NavLeftStyle}/></Link>
               <Link to="/media"><NavRight style={NavRightStyle}/></Link>
-              <NavUp style={NavUpStyle}/>
-              <NavDown style={NavDownStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
@@ -229,16 +228,18 @@ export default class Ttour extends React.PureComponent {
         </header>
 
         <main>
-         <Responsive minDeviceWidth={1024}>
 
-           <div style={bannerImage}></div>
+          <Responsive minDeviceWidth={1024}>
+            <div style={bannerImage}>
+              <h1 style={bannerText}>Shop</h1>
+            </div>
+          </Responsive>
+          <Responsive maxDeviceWidth={1023}>
+            <div style={bannerImageM}>
+              <h1 style={bannerTextM}>Shop</h1>
+            </div>
+          </Responsive>
 
-         </Responsive>
-         <Responsive maxDeviceWidth={1023}>
-
-           <div style={bannerImageM}></div>
-
-         </Responsive>
 
         </main>
 

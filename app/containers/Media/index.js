@@ -17,11 +17,11 @@ import MoreUp from 'material-ui/svg-icons/navigation/more-vert';
 import BurgerMenu from 'material-ui/svg-icons/navigation/menu';
 
 
+
 export default class Media extends React.PureComponent {
   render() {
     const navStyle={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       display: "flex",
       flexDirection: "row",
@@ -34,7 +34,6 @@ export default class Media extends React.PureComponent {
 
     const mobileNav={
       border: "1px solid #bbbbbb",
-      borderRadius:"5px",
       display: "flex",
       backgroundColor:"rgba(0, 0, 0, 0.55)",
       flexDirection: "row",
@@ -43,6 +42,14 @@ export default class Media extends React.PureComponent {
       width:"100%",
       zIndex:"99999",
 
+    }
+
+    const linkStyle={
+      textDecoration:"none",
+      color:"#ffffff",
+      fontSize:"45px",
+      fontFamily:"'Squada One', cursive",
+      textTransform:"uppercase",
 
     }
 
@@ -52,17 +59,6 @@ export default class Media extends React.PureComponent {
       fontSize:"1.6em",
       fontFamily:"'Squada One', cursive",
       textTransform:"uppercase",
-
-    }
-
-    const linkStyle={
-      textDecoration:"none",
-      color:"#ffffff",
-      fontSize:"45px",
-      fontFamily:"'Squada One', cursive",
-      fontWeight:"bold",
-      textTransform:"uppercase",
-
 
     }
 
@@ -85,21 +81,12 @@ export default class Media extends React.PureComponent {
 
     }
 
-    const NavUpStyle={
-      color:"#ffffff",
-    }
-
-    const NavDownStyle={
-      color:"#ffffff",
-    }
-
     const MoreOverStyle={
       color:"#c0c0c0",
       position:"absolute",
       bottom:"30px",
       width:"100%",
       height:"70px"
-
 
     }
 
@@ -156,6 +143,17 @@ export default class Media extends React.PureComponent {
 
     }
 
+    const bannerImage={
+      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
+      minHeight:"100vh",
+      width:"100%",
+      backgroundSize:"cover",
+      backgroundAttachment:"scroll",
+      display:"block",
+      zIndex:"99998",
+
+    }
+
     const bannerText={
       position:"absolute",
       textTransform:"uppercase",
@@ -164,20 +162,8 @@ export default class Media extends React.PureComponent {
       fontFamily:"'Squada One', cursive",
       margin:"3px",
       border:"2px",
-      top:"30%",
-      left:"50%"
-
-    }
-
-    const bannerImage={
-      position:"relative",
-      backgroundImage:"url(http://www.studiorussophotography.com/img/s/v-2/p903208717-5.jpg)",
-      minHeight:"100vh",
-      width:"100%",
-      backgroundSize:"cover",
-      backgroundAttachment:"scroll",
-      display:"block",
-      zIndex:"99998",
+      top:"40%",
+      left:"36%"
 
     }
 
@@ -191,13 +177,26 @@ export default class Media extends React.PureComponent {
 
     }
 
+    const bannerTextM={
+      position:"absolute",
+      textTransform:"uppercase",
+      color:"#ffffff",
+      fontSize:"5em",
+      fontFamily:"'Squada One', cursive",
+      margin:"3px",
+      border:"2px",
+      top:"60%",
+      left:"25%"
+
+    }
+
 
     const soundcloudFrame={
       boxSizing:"border-box",
       position:"relative",
-      paddingTop:"40px",
-      paddingLeft:"2px",
-      paddingRight:"2px",
+      paddingTop:"30px",
+      paddingLeft:"20px",
+      paddingRight:"20px",
 
     }
 
@@ -268,8 +267,6 @@ export default class Media extends React.PureComponent {
             <div>
               <Link to="/shop"><NavLeft style={NavLeftStyle}/></Link>
               <Link to="/"><NavRight style={NavRightStyle}/></Link>
-              <NavUp style={NavUpStyle}/>
-              <NavDown style={NavDownStyle}/>
             </div>
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
@@ -286,7 +283,7 @@ export default class Media extends React.PureComponent {
           </Responsive>
           <Responsive maxDeviceWidth={1023}>
             <div style={bannerImageM}>
-              <h1 style={bannerText}>Media</h1>
+              <h1 style={bannerTextM}>Media</h1>
             </div>
           </Responsive>
 
